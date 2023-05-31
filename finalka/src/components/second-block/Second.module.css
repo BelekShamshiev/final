@@ -1,0 +1,54 @@
+.second {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: #FFFFFF;
+  margin-top: 100px;
+}
+
+.second__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0px 15px;
+}
+
+.second__body {
+  min-height: 850px;
+  padding: 5px 0px;
+}
+
+.second__title h1 {
+  font-weight: 500;
+  font-size: 37px;
+  line-height: 94.49%;
+  color: #262626;
+}
+
+.second__link {
+  margin: 40px 0px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.second__link ul {
+  display: flex;
+  column-gap: 36px;
+}
+
+.second__link a{
+  perspective: 1000px;
+}
+.second__link a>span{
+  display: inline-block;
+  transition: transform 0.7s ease;
+  transform-style: preserve-3d;
+}
+.second__link a:hover span{
+  transform: rotateX(350deg);
+}
+.second__card {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}

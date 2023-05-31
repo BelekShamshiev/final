@@ -1,0 +1,39 @@
+.title {
+  max-width: 1440px;
+  width: 75%;
+  margin: 0 auto;
+}
+.contact {
+  font-size: 40px;
+}
+.title_adres {
+  margin-top: 50px;
+  display: flex;
+  gap: 120px;
+}
+.title_adres > h1 {
+  font-size: 20px;
+  white-space: nowrap;
+  color: black;
+}
+.adres > p {
+  font-size: 16px;
+  font-size: 20px;
+}
+.adres > h3 {
+  font-size: 14px;
+  color: darkgreen;
+}
+.map {
+  width: 1020px;
+  height: 450px;
+  border-radius: 20px;
+  margin-top: 30px;
+}
+.number>p{
+  font-size:20px;
+  color: black;
+}
+.number>a{
+  color: darkgreen;
+}

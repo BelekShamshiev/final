@@ -5,6 +5,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Autoplay } from "swiper";
+import Link from "next/link";
 
 const First = () => {
   return (
@@ -142,34 +143,37 @@ const First = () => {
               <div className={styles.catalog__card}>
                 <p>Смартфоны</p>
                 <div>
+                  <Link href="/mobil">
                   <Image className={styles.card_img}
                     src="/phone.png"
                     alt="Smartfon"
                     width={133}
                     height={130}
-                  />
+                  /></Link>
                 </div>
               </div>
               <div className={styles.catalog__card}>
-                <p>Планшеты</p>
+                <p>Телевизоры</p>
                 <div>
+                  <Link href="/television">
                   <Image  className={styles.card_img}
-                    src="/ipad.png"
+                    src="/qled.png"
                     alt="Smartfon"
                     width={150}
                     height={160}
-                  />
+                  /></Link>
                 </div>
               </div>
               <div className={styles.catalog__card}>
                 <p>Ноутбуки</p>
                 <div>
+                  <Link href="/laptop">
                   <Image className={styles.card_img}
                     src="/book.png"
                     alt="Smartfon"
                     width={200}
                     height={110}
-                  />
+                  /></Link>
                 </div>
               </div>
               <div className={styles.catalog__card}>

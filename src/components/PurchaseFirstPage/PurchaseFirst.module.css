@@ -26,7 +26,22 @@
 .purchaseFirst__link a:hover {
   text-decoration: underline;
 }
-
+.info_second_content_btn_3{
+  background: #FCFCFC;
+  border: 1.5px solid  #9A9A9A;
+  border-radius: 7px;
+  padding: 5px 8px;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 136.99%;
+  color: #9A9A9A;
+  cursor: pointer;
+  margin-left: 10px;
+}
+.info_second_content_btn_3:focus{
+  border: 1.5px solid  #3E4D31;
+  color: #3E4D31;
+}
 .purchaseFirst__link span {
   font-weight: 500;
   font-size: 12px;
@@ -212,16 +227,16 @@
 }
 
 .info_second_content_btn button:nth-child(2) {
-  background: green;
-  border: 1px solid green;
+  background:#ffd700;
+  border: 1px  solid  #ffd700;
   padding: 9px 9px 7px 9px;
   border-radius: 50%;
   cursor: pointer;
 }
 
 .info_second_content_btn button:nth-child(3) {
-  background: #1C00FF;;
-  border: 1px solid #1C00FF;;
+  background: #C0C0C0;;
+  border: 1px solid #C0C0C0;;
   padding: 9px 9px 7px 9px;
   border-radius: 50%;
   cursor: pointer;

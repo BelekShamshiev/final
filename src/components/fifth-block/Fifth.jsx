@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useRouter } from 'next/router';
 import styles from "./Fifth.module.css";
 import Image from "next/image";
-import NextLink from 'next/link';
+import Link from 'next/link';
 
 const Fifth = () => {
   const [name, setName] = useState("");
@@ -138,14 +138,14 @@ const Fifth = () => {
               {errors.contactMethod && (
                 <p className={styles.error}>{errors.contactMethod}</p>
               )}
-              <NextLink href="/obratka">
-              <button onClick={handleSubmit}>Отправить</button>
-              </NextLink>
+              <a href="/obratka">
+              <button  onClick={handleSubmit}>Отправить</button>
+              </a>
               <div className={styles.form__checkbox}>
                 <input
                   type="checkbox"
                   id="text"
-                  name="interest"
+                  name="interest" 
                   checked={isAgreed}
                   onChange={(e) => setIsAgreed(e.target.checked)}
                 />

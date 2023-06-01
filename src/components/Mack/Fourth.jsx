@@ -3,8 +3,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import { Autoplay, Pagination } from "swiper";
-import Image from 'next/image';
-
+import Image from "next/image";
 
 const Information = () => {
   return (
@@ -16,48 +15,71 @@ const Information = () => {
             <div className={s.fourth__info_subtitle}>
               <h4>Магазин электроники – Gorbushka _moscow</h4>
               <p>
-                Наш магазин на рынке с 2016 года. За это <br /> время мы научились
-                понимать Вас без лишних <br /> слов и действий!
+                Наш магазин на рынке с 2016 года. За это <br /> время мы
+                научились понимать Вас без лишних <br /> слов и действий!
               </p>
               <p>
                 В продаже различная техника: от портативных <br /> колонок до
-                кастомизированной техники, которую <br /> сейчас попросту не найти в{" "}
-                свободной продаже в <br /> России.  Apple, Samsung, Xiaomi, JBL и
-                другие - <br /> ТОЛЬКО ОРИГИНАЛ!
+                кастомизированной техники, которую <br /> сейчас попросту не
+                найти в свободной продаже в <br /> России.  Apple, Samsung,
+                Xiaomi, JBL и другие - <br /> ТОЛЬКО ОРИГИНАЛ!
               </p>
             </div>
           </div>
           <div className={s.fourth__second_info}>
             <div className={s.fourth__address}>
-              <h2>Наш адрес не <br /> меняется уже 8 лет! <br />  Мы находимся : </h2>
+              <h2>
+                Наш адрес не <br /> меняется уже 8 лет! <br /> Мы находимся :{" "}
+              </h2>
               <div className={s.fourth__address_subtitle}>
                 <h3>
-                  Москва, ул. Барклая, д. 8  <br /> ТЦ Горбушка (старая), павильоны 108/1,
-                  185, 140/6
+                  Москва, ул. Барклая, д. 8  <br /> ТЦ Горбушка (старая),
+                  павильоны 108/1, 185, 140/6
                 </h3>
                 {/* <img src="./time.svg" alt="" /> */}
                 <p>Часы работы: с 10:00 до 21:00 без выходных</p>
               </div>
             </div>
             <div className={s.fourth__item}>
-                <div>
-                  <div className={s.fouth__item_logo}>
-                  <Image src='/Image/FourthImg/info.png' alt='' width={23} height={23} />
-                  </div>
-                  <p>Только <br/> Оригинал</p>
-                </div>
-                <div>
+              <div>
                 <div className={s.fouth__item_logo}>
-                  <Image src='/Image/FourthImg/info.png' alt='' width={23} height={23} />
-                  </div>
-                  <p>Всегда Чек <br/> + Гарантия</p>
+                  <Image
+                    src="/Image/FourthImg/info.png"
+                    alt=""
+                    width={23}
+                    height={23}
+                  />
                 </div>
-                <div>
+                <p>
+                  Только <br /> Оригинал
+                </p>
+              </div>
+              <div>
                 <div className={s.fouth__item_logo}>
-                  <Image src='/Image/FourthImg/info.png' alt='' width={23} height={23} />
-                  </div>
-                  <p>Доставка по всей <br/> России (КАРГО, СДЭК)</p>
+                  <Image
+                    src="/Image/FourthImg/info.png"
+                    alt=""
+                    width={23}
+                    height={23}
+                  />
                 </div>
+                <p>
+                  Всегда Чек <br /> + Гарантия
+                </p>
+              </div>
+              <div>
+                <div className={s.fouth__item_logo}>
+                  <Image
+                    src="/Image/FourthImg/info.png"
+                    alt=""
+                    width={23}
+                    height={23}
+                  />
+                </div>
+                <p>
+                  Доставка по всей <br /> России (КАРГО, СДЭК)
+                </p>
+              </div>
             </div>
           </div>
         </div>

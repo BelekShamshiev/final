@@ -5,7 +5,7 @@ const Third = () => {
     return (
         <div className={s.third}>
                 <div className={s.third__title}>
-                    <Link href="/about" className={s.perehod}>MacBook Pro 14 M2</Link>
+                    <Link href="/macbook" className={s.perehod}>MacBook Pro 14 M2</Link>
                 </div>
         </div>
     );

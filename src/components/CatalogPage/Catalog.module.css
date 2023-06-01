@@ -16,7 +16,10 @@
   display:grid;
   row-gap: 20px;
 }
-
+.catalog_tabl{
+  display: grid;
+  grid-template-columns: repeat(3,2fr);
+}
 .catalog__link a {
   font-weight: 500;
   font-size: 12px;

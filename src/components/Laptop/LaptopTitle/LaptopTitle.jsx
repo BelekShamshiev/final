@@ -37,7 +37,7 @@ const LaptopTitle = ({ img, title, oldprice, price }) => {
                   <h2>{price}₽</h2>
                 </div>
                 <div>
-                <Link className={styles.btn} href='/information'>Купить</Link>
+                <Link className={styles.btn} href='/macbook'>Купить</Link>
                 </div>
               </div>
             </div>

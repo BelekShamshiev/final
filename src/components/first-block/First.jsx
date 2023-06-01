@@ -31,7 +31,9 @@ const First = () => {
                     < p>
                       Iphone 14 pro и Iphone 14 <br /> pro Max уже в продаже.{" "}
                     </p>
+                    <Link href="/second">
                     <button>Купить</button>
+                    </Link>
                   </div>
                 </div>
               </SwiperSlide>
@@ -43,7 +45,9 @@ const First = () => {
                     <p>
                       Apple Watch Series 6 <br />уже в продаже.{" "}
                     </p>
+                    <Link href="/second">
                     <button className={styles.watch_btn}>Купить</button>
+                    </Link>
                   </div>
                 </div>
               </SwiperSlide>
@@ -55,7 +59,9 @@ const First = () => {
                     <p>
                       Xiaomi 13 и 13pro <br /> pro Max уже в продаже.{" "}
                     </p>
+                    <Link href="/second">
                     <button className={styles.xiaomi_btn}>Купить</button>
+                    </Link>
                   </div>
                 </div>
               </SwiperSlide>
@@ -130,7 +136,9 @@ const First = () => {
                         <h2>31 990 ₽</h2>
                       </div>
                       <div>
+                      <Link href="/second">
                         <button>Купить</button>
+                        </Link>
                       </div>
                     </div>
                   </div>

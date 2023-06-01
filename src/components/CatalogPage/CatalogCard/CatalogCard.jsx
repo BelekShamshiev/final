@@ -10,7 +10,7 @@ const CatalogCard = ({title,img}) => {
           <div>
             <img
               src={img}
-              alt="Smartfon"
+              alt="Smart"
               width={153}
               height={135}
             />

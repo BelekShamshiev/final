@@ -1,22 +1,17 @@
-import React from 'react';
+import React from "react";
 import styles from "./MobilePhone.module.css";
-import Image from 'next/image';
-import Link from 'next/link';
+import Image from "next/image";
+import Link from "next/link";
+import Information from "@/components/Information/Information";
 const MobilePhone = ({ img, title, oldprice, price }) => {
-    return (
-        <div>
-            <div className={styles.second__item}>
+  return (
+    <div>
+      <div className={styles.second__item}>
         <div className={styles.second__card_container}>
           <div className={styles.second__card_body}>
             <div className={styles.second__card_title}>
               <h1>Хит</h1>
               <div className={styles.card__icon}>
-                <Image
-                  src="/Image/FirstBlock/Union.png"
-                  alt="Union"
-                  width={14}
-                  height={17}
-                />
                 <div className={styles.second__card__favorites}></div>
               </div>
             </div>
@@ -25,27 +20,27 @@ const MobilePhone = ({ img, title, oldprice, price }) => {
             </div>
             <div className={styles.second__card_info}>
               <p>{title}</p>
-              <Image
-                src="/Image/FirstBlock/reviews.png"
-                alt="Reviews"
-                width={73}
-                height={12}
-              />
+              sdfffdsfasadsd
               <div className={styles.second__card_subtitle}>
                 <div>
                   <p>{oldprice}₽</p>
                   <h2>{price}₽</h2>
                 </div>
                 <div>
-                <Link className={styles.btn} href='/second'>Купить</Link>
+                  <Link className={styles.btn} href="/second">
+                    Купить
+                  </Link>
                 </div>
+              </div>
+              <div className={styles.info}>
+                <Information />
               </div>
             </div>
           </div>
         </div>
       </div>
-        </div>
-    );
+    </div>
+  );
 };
 
 export default MobilePhone;

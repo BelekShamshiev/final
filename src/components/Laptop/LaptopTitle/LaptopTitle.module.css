@@ -16,7 +16,10 @@
     padding: 0px 5px;
     display: flex;
   }
-  
+  .info{
+    margin-top: -75px;
+    margin-left: -140px;
+  }
   .second__card_body {
     padding: 20px 0px;
   }

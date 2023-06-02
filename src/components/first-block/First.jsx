@@ -73,19 +73,6 @@ const First = () => {
                   <div className={styles.banner__product_title}>
                     <h1>Товар дня</h1>
                     <div className={styles.card__icon}>
-                      <Image
-                        src="/Image/FirstBlock/Union.png"
-                        alt="Union"
-                        width={14}
-                        height={17}
-                      />
-                      <Image
-                        className={styles.product__favorites}
-                        src="/Image/FirstBlock/like.png"
-                        alt="Union"
-                        width={19}
-                        height={18}
-                      />
                     </div>
                   </div>
                   <Swiper

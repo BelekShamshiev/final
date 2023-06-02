@@ -9,36 +9,31 @@ const Header = () => {
         <div className={s.aboveHeader__container}>
           <div className={s.aboveHeader_body}>
             <div className={s.aboveHeader__location}>
-              <Link href="/map">
+              <Link href="/contact">
               <p>Тц Белек, г.Бишкек, ул.Исанова ,115/1</p>
               </Link>
             </div>
             <nav className={s.aboveHeader_title}>
               <ul className={s.aboveHeader_title_li}>
                 <li>
-                  <a className={s.aboveHeader_description} href="#">
-                    О компании
-                  </a>
-                </li>
-                <li>
                   <Link className={s.aboveHeader_description} href="/delivery">
                     Доставка и оплата
                   </Link>
                 </li>
                 <li>
-                  <a className={s.aboveHeader_description} href="#">
+                  <Link href="/obmen" className={s.aboveHeader_description}>
                     Обмен и возврат
-                  </a>
+                    </Link>
                 </li>
                 <li>
-                  <a className={s.aboveHeader_description} href="#">
+                  <Link href="/servis" className={s.aboveHeader_description}>
                     Гарантия и сервис
-                  </a>
+                    </Link>
                 </li>
                 <li>
-                  <a className={s.aboveHeader_description} href="#">
+                  <Link className={s.aboveHeader_description} href="/contact">
                     Контакты
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </nav>

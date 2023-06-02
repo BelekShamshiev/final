@@ -2,6 +2,7 @@ import React from 'react';
 import styles from "./LaptopTitle.module.css";
 import Link from 'next/link';
 import Image from 'next/image';
+import Information from '@/components/Information/Information';
 
 const LaptopTitle = ({ img, title, oldprice, price }) => {
     return (
@@ -25,12 +26,7 @@ const LaptopTitle = ({ img, title, oldprice, price }) => {
             </div>
             <div className={styles.second__card_info}>
               <p>{title}</p>
-              <Image
-                src="/Image/FirstBlock/reviews.png"
-                alt="Reviews"
-                width={73}
-                height={12}
-              />
+              sdfffdsfasadsd
               <div className={styles.second__card_subtitle}>
                 <div>
                   <p>{oldprice}₽</p>
@@ -39,6 +35,9 @@ const LaptopTitle = ({ img, title, oldprice, price }) => {
                 <div>
                 <Link className={styles.btn} href='/macbook'>Купить</Link>
                 </div>
+              </div>
+              <div className={styles.info}>
+                <Information/>
               </div>
             </div>
           </div>

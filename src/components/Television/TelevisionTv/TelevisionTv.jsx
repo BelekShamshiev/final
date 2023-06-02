@@ -2,6 +2,7 @@ import React from 'react';
 import styles from "./TelevisionTv.module.css"
 import Link from 'next/link';
 import Image from 'next/image'; 
+import Information from '@/components/Information/Information';
     const TelevisionTv = ({ img, title, oldprice, price }) => {
     
     return (
@@ -12,12 +13,7 @@ import Image from 'next/image';
             <div className={styles.second__card_title}>
               <h1>Хит</h1>
               <div className={styles.card__icon}>
-                <Image
-                  src="/Image/FirstBlock/Union.png"
-                  alt="Union"
-                  width={14}
-                  height={17}
-                />
+              
                 <div className={styles.second__card__favorites}></div>
               </div>
             </div>
@@ -26,12 +22,7 @@ import Image from 'next/image';
             </div>
             <div className={styles.second__card_info}>
               <p>{title}</p>
-              <Image
-                src="/Image/FirstBlock/reviews.png"
-                alt="Reviews"
-                width={73}
-                height={12}
-              />
+              sdfffdsfasadsd
               <div className={styles.second__card_subtitle}>
                 <div>
                   <p>{oldprice}₽</p>
@@ -40,6 +31,9 @@ import Image from 'next/image';
                 <div>
                 <Link className={styles.btn} href='/information'>Купить</Link>
                 </div>
+              </div>
+              <div className={styles.info}>
+                <Information/>
               </div>
             </div>
           </div>

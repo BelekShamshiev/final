@@ -111,7 +111,7 @@ const Makbook = () => {
                     </div>
                     <div className={s.info_second_2_down}>
                       <h1>Экран:</h1>
-                      <button>11,3" </button>
+                      <button>13,3" </button>
                     </div>
                   </div>
                 </div>

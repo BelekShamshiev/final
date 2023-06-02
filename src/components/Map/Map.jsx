@@ -5,7 +5,6 @@ import Header from "../Header/Header";
 const Map = () => {
   return (
     <div>
-      <Header/>
     <div className={s.container}>
       <div className={s.title}>
         <h1 className={s.contact}>Контакты:</h1>
@@ -30,7 +29,6 @@ const Map = () => {
           referrerpolicy="no-referrer-when-downgrade"
         ></iframe>
       </div>
-      <Footer />
     </div>
     </div>
   );

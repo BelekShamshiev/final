@@ -8,7 +8,10 @@
     grid-template-columns: repeat(3,0fr); */
     cursor: pointer;
   }
-  
+  .info{
+    margin-left: -140px;
+    margin-top: -75px;
+  }
   .second__card_container {
     max-width: 255px;
     border-radius: 10px;

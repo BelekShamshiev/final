@@ -3,7 +3,7 @@
   width: 100%;
   height: 100%;
   background: #FFFFFF;
-  padding-bottom: 80px;
+  padding-top: 50px;
 }
 .error {
   color: white;
@@ -17,7 +17,6 @@
 
 .fifth__body {
   min-height: 475px;
-  padding: 5px 0px;
 }
 
 .fifth__form {

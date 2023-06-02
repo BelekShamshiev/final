@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import styles from './Gallery.module.css'
 import Image from 'next/image';
 
@@ -14,7 +15,9 @@ const Gallery = () => {
                         </div>
                         <div className={styles.iphone__picture}>
                             <Image src='/Image/GalleryImg/14pro.png' alt='location-logo' width={732} height={368} />
+                            <Link href="/second">
                             <p>iPhone 14 Pro</p>
+                            </Link>
                         </div>
                     </div>
                     <div className={styles.gallery__down}>

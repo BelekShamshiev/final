@@ -1,11 +1,13 @@
-import { laptop } from "@/constans/Laptop";
-import LaptopTitle from "./LaptopTitle/LaptopTitle";
-import React, { useState } from "react";
-import s from "./Laptop.module.css";
-import Footer from "../footer/Footer";
+import React from "react";
+import s from "../Mobile/Mobile.module.css";
+import { useState } from "react";
 import Header from "../Header/Header";
-const Laptop = () => {
+import { watch } from "@/constans/watch";
+import AppleWatchCart from "./AppleWatchCart/AppleWatchCart";
+import { applewatch } from "@/constans/applewatch";
+const AppleWatch = () => {
   const [select, setSelect] = useState("");
+
   return (
     <div className={s.container}>
       <Header />
@@ -38,22 +40,21 @@ const Laptop = () => {
           </div>
         </div>
         <div className={s.card}>
-          {laptop.map((item) => {
+          {applewatch.map((item) => {
             return (
-              <LaptopTitle
+              <AppleWatchCart
                 id={item.id}
                 img={item.img}
                 title={item.title}
                 oldprice={item.oldprice}
                 price={item.price}
-              />
+              ></AppleWatchCart>
             );
           })}
         </div>
-      </div>{" "}
-      <Footer />
+      </div>
     </div>
   );
 };
 
-export default Laptop;
+export default AppleWatch;

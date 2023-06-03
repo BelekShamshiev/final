@@ -1,13 +1,13 @@
-import React from 'react';
-import styles from "./LaptopTitle.module.css";
-import Link from 'next/link';
-import Image from 'next/image';
-import Information from '@/components/Information/Information';
-import {motion} from "framer-motion"
-
-const LaptopTitle = ({ img, title, oldprice, price }) => {
-    return (
-        <motion.div className={styles.second__item}
+import React, { Children } from "react";
+import Link from "next/link";
+import { motion } from "framer-motion";
+import Image from "next/image";
+import styles from "../../Laptop/LaptopTitle/LaptopTitle.module.css";
+const AppleWatchCart = ({ img, title, oldprice, price}) => {
+  return (
+    <div>
+      <motion.div
+        className={styles.second__item}
         layout
         transition={{
           opacity: { ease: "linear" },
@@ -17,14 +17,11 @@ const LaptopTitle = ({ img, title, oldprice, price }) => {
         initial="hidden"
         // transition={{ duration: 0.6 }}
         whileInView="visible"
-        variants={
-          {
-            hidden: { scale: 0 },
-            visible: { scale: 1 }
-  
-          }
-        }
-        >
+        variants={{
+          hidden: { scale: 0 },
+          visible: { scale: 1 },
+        }}
+      >
         <div className={styles.second__card_container}>
           <div className={styles.second__card_body}>
             <div className={styles.second__card_title}>
@@ -51,17 +48,16 @@ const LaptopTitle = ({ img, title, oldprice, price }) => {
                   <h2>{price}₽</h2>
                 </div>
                 <div>
-                <Link className={styles.btn} href='/macbook'>Купить</Link>
+                  <Link className={styles.btn} href="/watch">Купить</Link>
                 </div>
               </div>
-              <div className={styles.info}>
-                <Information/>
-              </div>
+              <div className={styles.info}></div>
             </div>
           </div>
         </div>
       </motion.div>
-    );
+    </div>
+  );
 };
 
-export default LaptopTitle;
+export default AppleWatchCart;

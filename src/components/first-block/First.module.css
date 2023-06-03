@@ -208,6 +208,12 @@
 .banner__product_slide:hover {
   transform: scale(1.1);
 }
+.cotalog{
+  padding-top: 20px;
+    color: #063500;
+
+}
+
 .banner__product_info p {
   font-weight: 500;
   font-size: 15px;

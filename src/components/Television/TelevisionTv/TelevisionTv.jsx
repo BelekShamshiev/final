@@ -2,12 +2,31 @@ import React from 'react';
 import styles from "./TelevisionTv.module.css"
 import Link from 'next/link';
 import Image from 'next/image'; 
+import {motion} from "framer-motion"
 import Information from '@/components/Information/Information';
     const TelevisionTv = ({ img, title, oldprice, price }) => {
     
     return (
         <div>
-             <div className={styles.second__item}>
+             <motion.div className={styles.second__item}
+             
+             layout
+             transition={{
+               opacity: { ease: "linear" },
+               layout: { duration: 0.5 },
+               duration: 0.7,
+             }}
+             initial="hidden"
+             // transition={{ duration: 0.6 }}
+             whileInView="visible"
+             variants={
+               {
+                 hidden: { scale: 0 },
+                 visible: { scale: 1 }
+       
+               }
+             }
+             >
         <div className={styles.second__card_container}>
           <div className={styles.second__card_body}>
             <div className={styles.second__card_title}>
@@ -29,7 +48,7 @@ import Information from '@/components/Information/Information';
                   <h2>{price}₽</h2>
                 </div>
                 <div>
-                <Link className={styles.btn} href='/information'>Купить</Link>
+                <Link className={styles.btn} href='/tv'>Купить</Link>
                 </div>
               </div>
               <div className={styles.info}>
@@ -38,7 +57,7 @@ import Information from '@/components/Information/Information';
             </div>
           </div>
         </div>
-      </div>
+      </motion.div>
         </div>
     );
 };

@@ -4,7 +4,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-import { Autoplay } from "swiper";
+import { Autoplay,EffectFade } from "swiper";
 import Link from "next/link";
 
 const First = () => {
@@ -13,12 +13,12 @@ const First = () => {
       <div className={styles.first__container}>
         <div className={styles.first__body}>
           <div className={styles.banner__block}>
-            <Swiper
+            <Swiper  effect="fade"
             grabCursor
               slidesPerView={1}
               spaceBetween={30}
               loop={true}
-              speed={2500}
+              speed={2200}
               autoplay={{ delay: 1800 }}
               modules={[ Autoplay]}
               className={styles.swiperFirst}
@@ -133,6 +133,8 @@ const First = () => {
               </div>
             </div>
           </div>
+          <div>
+            <h1 className={styles.cotalog}>Коталог</h1>
           <div className={styles.catalog__block}>
             <div className={styles.catalog__card_items}>
               <div className={styles.catalog__card}>
@@ -204,6 +206,7 @@ const First = () => {
                   />
                 </div>
               </div>
+            </div>
             </div>
           </div>
         </div>

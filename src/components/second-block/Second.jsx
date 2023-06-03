@@ -31,7 +31,7 @@ const Second = () => {
               </li>
             </ul>
             <ul>
-              <Link href="/product">
+              <Link href="/catalog">
                 <p>Смотреть все &#8594;</p>
               </Link>
             </ul>

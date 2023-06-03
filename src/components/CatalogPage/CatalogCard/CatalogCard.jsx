@@ -1,6 +1,7 @@
 import React from "react";
 import s from "../Catalog.module.css";
-const CatalogCard = ({title,img}) => {
+import Link from "next/link";
+const CatalogCard = ({title,img,link}) => {
   return (
     <div>
       <div className={s.catalog__card_items}>
@@ -15,6 +16,9 @@ const CatalogCard = ({title,img}) => {
               height={135}
             />
           </div>
+          <Link href={link}>
+          Смотреть
+          </Link>
         </div>
       </div>
     </div>

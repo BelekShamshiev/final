@@ -1,10 +1,27 @@
 import React from "react";
 import styles from "./Objekt.module.css";
+import {motion} from "framer-motion"
 import Image from "next/image";
 import Link from "next/link";
 const Objekt = ({ img, title, oldprice, price }) => {
   return (
-    <div className={styles.second__item}>
+    < motion.div className={styles.second__item}
+    layout
+    transition={{
+      opacity: { ease: "linear" },
+      layout: { duration: 0.5 },
+      duration: 0.7,
+    }}
+    initial="hidden"
+    // transition={{ duration: 0.6 }}
+    whileInView="visible"
+    variants={
+      {
+        hidden: { scale: 0 },
+        visible: { scale: 1 }
+
+      }
+    }>
       <div className={styles.second__card_container}>
         <div className={styles.second__card_body}>
           <div className={styles.second__card_title}>
@@ -45,7 +62,7 @@ const Objekt = ({ img, title, oldprice, price }) => {
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

@@ -1,77 +1,88 @@
-import { useState } from 'react';
-import styles from './Admin.module.css';
-
-const AddProduct = () => {
-  const [title, setTitle] = useState('');
-  const [photo, setPhoto] = useState('');
-  const [price, setPrice] = useState('');
-  const [name, setName] = useState('');
-  const [products, setProducts] = useState([]);
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-
-    const newProduct = {
-      title,
-      photo,
-      price,
-      name,
-    };
-
-    // Add the new product to the list of products
-    setProducts([...products, newProduct]);
-
-    // Clear the fields after submission
-    setTitle('');
-    setPhoto('');
-    setPrice('');
-    setName('');
-  };
-
+import React from "react";
+import s from "./Admin.module.css";
+import Link from "next/link";
+import { motion } from "framer-motion";
+const Admin = () => {
   return (
-    <div className={styles.container}>
-      <h1 className={styles.heading}>Админская панель - Добавление товара</h1>
-      <form onSubmit={handleSubmit} className={styles.form}>
-        <div>
-          <label>
-            Заголовок:
-            <input type="text" value={title} onChange={(e) => setTitle(e.target.value)} className={styles.input} />
-          </label>
-        </div>
-        <div>
-          <label>
-            Фото:
-            <input type="text" value={photo} onChange={(e) => setPhoto(e.target.value)} className={styles.input} />
-          </label>
-        </div>
-        <div>
-          <label>
-            Цена:
-            <input type="text" value={price} onChange={(e) => setPrice(e.target.value)} className={styles.input} />
-          </label>
-        </div>
-        <div>
-          <label>
-            Имя:
-            <input type="text" value={name} onChange={(e) => setName(e.target.value)} className={styles.input} />
-          </label>
-        </div>
-        <button type="submit" className={styles.button}>Добавить товар</button>
-      </form>
+    <div className={s.container}>
+      <motion.div className={s.title}
+      
+      layout
+      transition={{
+        opacity: { ease: "linear" },
+        layout: { duration: 0.5 },
+        duration: 0.7,
+      }}
+      initial="hidden"
+      // transition={{ duration: 0.6 }}
+      whileInView="visible"
+      variants={
+        {
+          hidden: { scale: 0 },
+          visible: { scale: 1 }
 
-      <h2 className={`${styles.heading} ${styles.login_boss}`}>Добавленные товары:</h2>
-      <ul className={styles.login}>
-        {products.map((product, index) => (
-          <li key={index} className={`${styles.product} ${styles.login_title}`}>
-            <h3>{product.title}</h3>
-            <p>Фото: {product.photo}</p>
-            <p>Цена: {product.price}</p>
-            <p>Имя: {product.name}</p>
-          </li>
-        ))}
-      </ul>
+        }
+      } 
+      >
+      <div className={s.first}>
+          <Link href="/">
+            <div className={s.first_back}>
+              <h1></h1>
+            </div>
+          </Link>
+        </div>
+        <div className={s.first}>
+          <Link href="/toadmin">
+            <div className={s.first_back}>
+              <h1></h1>
+            </div>
+          </Link>
+        </div>
+        <div className={s.first}>
+          <Link href="/toadmin">
+            <div className={s.first_back}>
+              <h1></h1>
+            </div>
+          </Link>
+        </div>
+        <div className={s.first}>
+          <Link href="/toadmin">
+            <div className={s.first_back}>
+              <h1></h1>
+            </div>
+          </Link>
+        </div>
+        <div className={s.first}>
+          <Link href="/toadmin">
+            <div className={s.first_back}>
+              <h1></h1>
+            </div>
+          </Link>
+        </div>
+        <div className={s.first}>
+          <Link href="/toadmin">
+            <div className={s.first_back}>
+              <h1></h1>
+            </div>
+          </Link>
+        </div>
+        <div className={s.first}>
+          <Link href="/toadmin">
+            <div className={s.first_back}>
+              <h1></h1>
+            </div>
+          </Link>
+        </div>
+        <div className={s.first}>
+          <Link href="/toadmin">
+            <div className={s.first_back}>
+              <h1></h1>
+            </div>
+          </Link>
+        </div>
+      </ motion.div>
     </div>
   );
 };
 
-export default AddProduct;
+export default Admin;

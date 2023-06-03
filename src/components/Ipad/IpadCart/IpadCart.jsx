@@ -1,15 +1,12 @@
-import React from "react";
-import styles from "./MobilePhone.module.css";
-import Image from "next/image";
-import {motion} from "framer-motion"
-import Link from "next/link";
-import Information from "@/components/Information/Information";
-const MobilePhone = ({ img, title, oldprice, price }) => {
-  return (
-    <div>
-      <motion.div className={styles.second__item}
-      
-      layout
+import React from 'react';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+import Image from 'next/image';
+import styles from "../../Laptop/LaptopTitle/LaptopTitle.module.css"
+const IpadCart = ({ img, title, oldprice, price }) => {
+    return (
+        <motion.div className={styles.second__item}
+              layout
 			transition={{
 				opacity: { ease: "linear" },
 				layout: { duration: 0.5 },
@@ -24,12 +21,19 @@ const MobilePhone = ({ img, title, oldprice, price }) => {
 					visible: { scale: 1 }
 
 				}
-			}>
+			}
+        >
         <div className={styles.second__card_container}>
           <div className={styles.second__card_body}>
             <div className={styles.second__card_title}>
               <h1>Хит</h1>
               <div className={styles.card__icon}>
+                <Image
+                  src="/Image/FirstBlock/Union.png"
+                  alt="Union"
+                  width={14}
+                  height={17}
+                />
                 <div className={styles.second__card__favorites}></div>
               </div>
             </div>
@@ -45,20 +49,16 @@ const MobilePhone = ({ img, title, oldprice, price }) => {
                   <h2>{price}₽</h2>
                 </div>
                 <div>
-                  <Link className={styles.btn} href="/second">
-                    Купить
-                  </Link>
+                <Link className={styles.btn} href='/planshet'>Купить</Link>
                 </div>
               </div>
               <div className={styles.info}>
-                <Information />
               </div>
             </div>
           </div>
-        </div>     
-         </motion.div>
-      </div>
-  );
+        </div>
+      </motion.div>
+    );
 };
 
-export default MobilePhone;
+export default IpadCart;

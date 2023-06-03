@@ -1,10 +1,10 @@
-import { laptop } from "@/constans/Laptop";
-import LaptopTitle from "./LaptopTitle/LaptopTitle";
-import React, { useState } from "react";
-import s from "./Laptop.module.css";
-import Footer from "../footer/Footer";
+import React from "react";
+import s from "../Mobile/Mobile.module.css";
+import { useState } from "react";
 import Header from "../Header/Header";
-const Laptop = () => {
+import { planshet } from "@/constans/Planshet";
+import IpadCart from "./IpadCart/IpadCart";
+const Ipad = () => {
   const [select, setSelect] = useState("");
   return (
     <div className={s.container}>
@@ -38,22 +38,21 @@ const Laptop = () => {
           </div>
         </div>
         <div className={s.card}>
-          {laptop.map((item) => {
+          {planshet.map((item) => {
             return (
-              <LaptopTitle
+              <IpadCart
                 id={item.id}
                 img={item.img}
                 title={item.title}
                 oldprice={item.oldprice}
                 price={item.price}
-              />
+              ></IpadCart>
             );
           })}
         </div>
-      </div>{" "}
-      <Footer />
+      </div>
     </div>
   );
 };
 
-export default Laptop;
+export default Ipad;

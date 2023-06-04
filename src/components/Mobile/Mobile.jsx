@@ -1,52 +1,67 @@
-import s from "./Mobile.module.css";
 import React, { useState } from "react";
 import MobilePhone from "./MobilePhone/MobilePhone";
-import { mobile } from "@/constans/Mobile";
 import Footer from "../footer/Footer";
 import Header from "../Header/Header";
-const Mobile = () => {
-    const [select, setSelect] = useState("");
+import styles from "./Mobile.module.css";
+import { mobile } from "@/constans/Mobile";
 
-    return (
-        <div>
-          <Header/>
-            <div className={s.home}>     
-               <div className={s.filter}>
-           <div className={s.filter_brend}>
-          <h1>Фильтр по параметрам</h1>
-          <select
-            className={s.filter_brend_select}
-            value={select}
-            onChange={(e) => setSelect(e.target.value)}
-            name=""
-            id=""
-          >
-            <option className={s.option} value="Apple">
-              {" "}
-              <input type="checkbox" />
-              Apple
-            </option>
-            <option className={s.option} value="Samsung">
-              {" "}
-              <input type="checkbox" />
-              Samsung
-            </option>
-            <option className={s.option} value="Xiaomi">
-              {" "}
-              <input type="checkbox" /> Xiaomi
-            </option>
-          </select>
+const Mobile = () => {
+  const [select, setSelect] = useState("");
+  const [filteredMobiles, setFilteredMobiles] = useState(mobile);
+
+  const handleFilterChange = (e) => {
+    const selectedPrice = e.target.value;
+    setSelect(selectedPrice);
+
+    if (selectedPrice === "") {
+      setFilteredMobiles(mobile);
+    } else {
+      const filtered = mobile.filter(
+        (item) => item.price <= parseInt(selectedPrice)
+      );
+      setFilteredMobiles(filtered);
+    }
+  };
+
+  return (
+    <div>
+      <Header />
+      <div className={styles.home}>
+        <div className={styles.filter}>
+          <div className={styles.filter_brend}>
+            <h1>Фильтр по параметрам</h1>
+            <select
+              className={styles.filter_brend_select}
+              value={select}
+              onChange={handleFilterChange}
+            >
+              <option value="">All</option>
+              <option value="20000">20000</option>
+              <option value="40000">40000</option>
+              <option value="50000">50000</option>
+              <option value="60000">60000</option>
+              <option value="70000">70000</option>
+              <option value="80000">80000</option>
+              <option value="90000">90000</option>
+              <option value="100000">100000</option>
+            </select>
+          </div>
         </div>
+        <div className={styles.card}>
+          {filteredMobiles.map((item) => (
+            <MobilePhone
+              key={item.id}
+              img={item.img}
+              title={item.title}
+              oldprice={item.oldprice}
+              price={item.price}
+            />
+          ))}
         </div>
-            <div className={s.card}>
-                { mobile.map((item)=>{
-                    return <MobilePhone id={item.id} img={item.img} title={item.title} oldprice={item.oldprice} price={item.price}/>
-                })}
-            </div> 
-             </div>
-             <Footer/>
-        </div>
-    );
+      </div>
+      <Footer />
+    </div>
+  );
 };
 
 export default Mobile;

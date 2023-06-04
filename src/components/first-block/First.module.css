@@ -203,7 +203,7 @@
   transition: transform 0.5s ease-in-out;
 }
 .card_img:hover {
-  filter: brightness(115%);
+  filter: brightness(105%);
 }
 .banner__product_slide:hover {
   transform: scale(1.1);
@@ -292,30 +292,38 @@
   border-radius: 6px;
   transition: 0.3s all ease;
   cursor: pointer;
+  border: solid 1.5px #0a4801;
 }
 
 .catalog__card:hover {
   transform: scale(1.05);
+  border: solid 1.5px #063500;
 }
 
 .catalog__card:nth-child(2) {
   background: #d2e6d2;
+  border: solid 1.5px #063500;
 }
 
 .catalog__card:nth-child(3) {
   background: #d2d2e5;
+  border: solid 1.5px #063500;
 }
 
 .catalog__card:nth-child(4) {
-  background: #dddcd2;
+  background: #ffffff;
+  border: solid 1.5px #063500;
 }
 
 .catalog__card:nth-child(5) {
   background: rgba(238, 224, 224, 0.95);
+  border: solid 1.5px #063500;
+
 }
 
 .catalog__card:nth-child(6) {
   background: #d2dde5;
+  border: solid 1.5px #063500;
 }
 
 .card__cirsle {

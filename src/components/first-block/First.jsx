@@ -176,34 +176,37 @@ const First = () => {
               <div className={styles.catalog__card}>
                 <p>Наушники</p>
                 <div>
+                  <Link href="/pods">
                   <Image className={styles.card_img}
-                    src="/max.png"
+                    src="/airpods.svg"
                     alt="Smartfon"
-                    width={173}
-                    height={185}
-                  />
+                    width={123}
+                    height={135}
+                  /></Link>
                 </div>
               </div>
               <div className={styles.catalog__card}>
                 <p>Смарт-часы</p>
                 <div>
+                  <Link href="/applewatch">
                   <Image className={styles.card_img}
                     src="/watch.png"
                     alt="Smartfon"
                     width={173}
                     height={165}
-                  />
+                  /></Link>
                 </div>
               </div>
               <div className={styles.catalog__card}>
-                <p>Аксессуары</p>
+                <p>Планшеты</p>
                 <div>
+                  <Link href="/ipad">
                   <Image className={styles.card_img}
-                    src="/agoz.png"
+                    src="/ipad.svg"
                     alt="Smartfon"
-                    width={153}
-                    height={160}
-                  />
+                    width={133}
+                    height={130}
+                  /></Link>
                 </div>
               </div>
             </div>

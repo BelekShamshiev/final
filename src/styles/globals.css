@@ -37,6 +37,10 @@ a {
 button{
   cursor: pointer;
 }
+input{
+  color: #3e4d31;
+  background-color: #3e4d31;
+}
 .swiper-button-next:after,
 .swiper-container-rtl .swiper-button-prev:after {
   content: "";

@@ -23,8 +23,7 @@ const SecondCard = ({ img, title, oldprice, price }) => {
         <div className={styles.second__card_body}>
           <div className={styles.second__card_title}>
             <h1>Хит</h1>
-            <div className={styles.card__icon}>
-            </div>
+            <div className={styles.card__icon}></div>
           </div>
           <div className={styles.second__card_img}>
             <img src={img} alt="img" />

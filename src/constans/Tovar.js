@@ -5,5 +5,7 @@ export const tovar = [
     {id:4,img: "/violet.svg",title: "Смартфон Apple iPhone 12 4/128 ГБ, nano SIM+eSIM, фиолетовый",oldprice: "62 299",price: "56 102 "},
     {id:5,img: "/ipad.svg",title: "Планшет Apple iPad Air (2022) 10.9 Wi-Fi 64Gb серый космос (MM9C3)",oldprice: "72 190",price: "66 990 "},
     {id:6,img: "/mackbook.png",title: "13.3 Ноутбук Apple MacBook Pro 13 2022 2560x1600, Apple M2",oldprice: "162 990 ",price: "116 849 "},
+    {id:7,img: "/airpods.svg",title: "Беспроводные наушники Apple AirPods Pro 2, белый",oldprice: "31 573 ",price: "21 573 "},
+    {id:8,img: "/ipad.svg",title: "Планшет Apple iPad Air (2022) 10.9 Wi-Fi 64Gb серый космос (MM9C3)",oldprice: "72 190",price: "66 990 "},
 
 ]

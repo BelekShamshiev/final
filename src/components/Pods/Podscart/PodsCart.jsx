@@ -1,8 +1,9 @@
 import React from "react";
-import styles from "./SecondCard.module.css";
+import Link from "next/link";
 import { motion } from "framer-motion";
-
-const SecondCard = ({ img, title, oldprice, price }) => {
+import Image from "next/image";
+import styles from "../../Laptop/LaptopTitle/LaptopTitle.module.css";
+const PodsCart = ({ img, title, oldprice, price }) => {
   return (
     <motion.div
       className={styles.second__item}
@@ -13,6 +14,7 @@ const SecondCard = ({ img, title, oldprice, price }) => {
         duration: 0.7,
       }}
       initial="hidden"
+      // transition={{ duration: 0.6 }}
       whileInView="visible"
       variants={{
         hidden: { scale: 0 },
@@ -24,22 +26,33 @@ const SecondCard = ({ img, title, oldprice, price }) => {
           <div className={styles.second__card_title}>
             <h1>Хит</h1>
             <div className={styles.card__icon}>
+              <Image
+                src="/Image/FirstBlock/Union.png"
+                alt="Union"
+                width={14}
+                height={17}
+              />
+              <div className={styles.second__card__favorites}></div>
             </div>
           </div>
           <div className={styles.second__card_img}>
-            <img src={img} alt="img" />
+            <Image src={img} alt="Apple-Watch" width={150} height={155} />
           </div>
           <div className={styles.second__card_info}>
             <p>{title}</p>
+            sdfffdsfasadsd
             <div className={styles.second__card_subtitle}>
               <div>
                 <p>{oldprice}₽</p>
-                <h2>{price} ₽</h2>
+                <h2>{price}₽</h2>
               </div>
               <div>
-                <button>Купить</button>
+                <Link className={styles.btn} href="/aksesuar">
+                  Купить
+                </Link>
               </div>
             </div>
+            <div className={styles.info}></div>
           </div>
         </div>
       </div>
@@ -47,4 +60,4 @@ const SecondCard = ({ img, title, oldprice, price }) => {
   );
 };
 
-export default SecondCard;
+export default PodsCart;

@@ -29,9 +29,14 @@
   background-position: center center;
   width: 50%;
   height: 368px;
+  display: inline-block;
+  transition: transform 2s ease;
+  transform-style: preserve-3d;
   cursor: pointer;
 }
-
+.dyson__picture:hover{
+  transform: rotateX(350deg);
+}
 .dyson__picture p {
   position: absolute;
   right: 31px;
@@ -49,10 +54,16 @@
   background-position: center center;
   background-size: cover;
   width: 50%;
+  display: inline-block;
+  transition: transform 2s ease;
+  transform-style: preserve-3d;
   height: 368px;
   cursor: pointer;
 }
+.iphone__picture:hover{
+  transform: rotateX(350deg);
 
+}
 .iphone__picture p {
   position: absolute;
   right: 134px;

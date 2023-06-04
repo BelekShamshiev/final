@@ -1,21 +1,33 @@
 import Link from "next/link";
 import s from "./Catalog.module.css";
 import Image from "next/image";
-
+import { motion } from "framer-motion";
 const Catalog = () => {
   return (
     <div className={s.catalog}>
       <div className={s.catalog__container}>
         <div className={s.catalog__body}>
-          <div className={s.catalog__link}>
-            <a href="#"> Главная /</a>
-            <span> Каталог товаров</span>
-          </div>
+          <div className={s.catalog__link}></div>
           <div className={s.catalog__title}>
             <h1>Каталог</h1>
           </div>
           <div className={s.catalog__card_items}>
-            <div className={s.catalog__card}>
+            <motion.div className={s.catalog__card}
+            
+            layout
+            transition={{
+              opacity: { ease: "linear" },
+              layout: { duration: 0.5 },
+              duration: 0.7,
+            }}
+            initial="hidden"
+            // transition={{ duration: 0.6 }}
+            whileInView="visible"
+            variants={{
+              hidden: { scale: 0 },
+              visible: { scale: 1 },
+            }}
+            >
               <div className={s.card__cirsle}></div>
               <p>Смартфоны</p>
               <div>
@@ -28,21 +40,52 @@ const Catalog = () => {
                   />
                 </Link>
               </div>
-            </div>
-            <div className={s.catalog__card}>
+            </motion.div>
+            <motion.div className={s.catalog__card}
+            
+            layout
+            transition={{
+              opacity: { ease: "linear" },
+              layout: { duration: 0.5 },
+              duration: 0.7,
+            }}
+            initial="hidden"
+            // transition={{ duration: 0.6 }}
+            whileInView="visible"
+            variants={{
+              hidden: { scale: 0 },
+              visible: { scale: 1 },
+            }}
+            >
               <div className={s.card__cirsle}></div>
               <p>Планшеты</p>
               <div>
                 <Link href="/ipad">
-                <Image
-                  src="/ipad.svg"
-                  alt="Smartfon"
-                  width={123}
-                  height={135}
-                /></Link>
+                  <Image
+                    src="/ipad.svg"
+                    alt="Smartfon"
+                    width={123}
+                    height={135}
+                  />
+                </Link>
               </div>
-            </div>
-            <div className={s.catalog__card}>
+            </motion.div>
+            <motion.div className={s.catalog__card}
+                  layout
+                  transition={{
+                    opacity: { ease: "linear" },
+                    layout: { duration: 0.5 },
+                    duration: 0.7,
+                  }}
+                  initial="hidden"
+                  // transition={{ duration: 0.6 }}
+                  whileInView="visible"
+                  variants={{
+                    hidden: { scale: 0 },
+                    visible: { scale: 1 },
+                  }}
+            
+            >
               <div className={s.card__cirsle}></div>
               <p>Ноутбуки</p>
               <div>
@@ -55,8 +98,23 @@ const Catalog = () => {
                   />
                 </Link>
               </div>
-            </div>
-            <div className={s.catalog__card}>
+            </motion.div>
+            <motion.div className={s.catalog__card}
+                  layout
+                  transition={{
+                    opacity: { ease: "linear" },
+                    layout: { duration: 0.5 },
+                    duration: 0.7,
+                  }}
+                  initial="hidden"
+                  // transition={{ duration: 0.6 }}
+                  whileInView="visible"
+                  variants={{
+                    hidden: { scale: 0 },
+                    visible: { scale: 1 },
+                  }}
+            
+            >
               <div className={s.card__cirsle}></div>
               <p>TV</p>
               <div>
@@ -69,80 +127,65 @@ const Catalog = () => {
                   />
                 </Link>
               </div>
-            </div>
-            <div className={s.catalog__card}>
+            </motion.div>
+            <motion.div className={s.catalog__card}
+                  layout
+                  transition={{
+                    opacity: { ease: "linear" },
+                    layout: { duration: 0.5 },
+                    duration: 0.7,
+                  }}
+                  initial="hidden"
+                  // transition={{ duration: 0.6 }}
+                  whileInView="visible"
+                  variants={{
+                    hidden: { scale: 0 },
+                    visible: { scale: 1 },
+                  }}
+            
+            >
               <div className={s.card__cirsle}></div>
               <p>Смарт-часы</p>
               <div>
                 <Link href="/applewatch">
-                <Image
-                  src="/watch.png"
-                  alt="Smartfon"
-                  width={163}
-                  height={155}
-                /></Link>
+                  <Image
+                    src="/watch.png"
+                    alt="Smartfon"
+                    width={163}
+                    height={155}
+                  />
+                </Link>
               </div>
-            </div>
-            <div className={s.catalog__card}>
-              <div className={s.card__cirsle}></div>
-              <p>Аксессуары</p>
-              <div>
-                <Image
-                  src="/agoz.png"
-                  alt="Smartfon"
-                  width={123}
-                  height={135}
-                />
-              </div>
-            </div>
-            <div className={s.catalog__card}>
-              <div className={s.card__cirsle}></div>
-              <p>Колонки</p>
-              <div>
-                <Image
-                  src="/kolonki.svg"
-                  alt="Smartfon"
-                  width={150}
-                  height={135}
-                />
-              </div>
-            </div>
-            <div className={s.catalog__card}>
-              <div className={s.card__cirsle}></div>
-              <p>Игоровые приставки</p>
-              <div>
-                <Image
-                  src="/xbox.png"
-                  alt="Smartfon"
-                  width={123}
-                  height={135}
-                />
-              </div>
-            </div>
-            <div className={s.catalog__card}>
-              <div className={s.card__cirsle}></div>
-              <p>Квадаракоптеры</p>
-              <div>
-                <Image
-                  src="/kvadra.png"
-                  alt="Smartfon"
-                  width={133}
-                  height={135}
-                />
-              </div>
-            </div>
-            <div className={s.catalog__card}>
+            </motion.div>
+            <motion.div className={s.catalog__card}
+                  layout
+                  transition={{
+                    opacity: { ease: "linear" },
+                    layout: { duration: 0.5 },
+                    duration: 0.7,
+                  }}
+                  initial="hidden"
+                  // transition={{ duration: 0.6 }}
+                  whileInView="visible"
+                  variants={{
+                    hidden: { scale: 0 },
+                    visible: { scale: 1 },
+                  }}
+            
+            >
               <div className={s.card__cirsle}></div>
               <p>Наушники</p>
               <div>
-                <Image
-                  src="/airpods.svg"
-                  alt="Smartfon"
-                  width={123}
-                  height={135}
-                />
+                <Link href="/pods">
+                  <Image
+                    src="/airpods.svg"
+                    alt="Smartfon"
+                    width={123}
+                    height={135}
+                  />
+                </Link>
               </div>
-            </div>
+            </motion.div>
           </div>
         </div>
       </div>

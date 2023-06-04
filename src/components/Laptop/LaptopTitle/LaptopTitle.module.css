@@ -63,7 +63,7 @@
   }
   .second__card_img:hover{
     transform: scale(1.1);
-    filter: brightness(120%);
+    filter: brightness(105%);
   }
   
   .second__card_info {

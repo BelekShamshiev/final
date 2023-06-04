@@ -27,7 +27,17 @@
 .second__link {
   margin: 40px 0px;
   display: flex;
-  justify-content: space-between;
+  gap: 20px;
+}
+.second__link button{
+  border: none;
+  display: inline-block;
+  transition: transform 0.7s ease;
+  transform-style: preserve-3d;
+  background-color: transparent;
+}
+.second__link button{
+  color: #3edb1b;
 }
 
 .second__link ul {
@@ -51,4 +61,13 @@
   justify-content: center;
   flex-wrap: wrap;
   gap: 15px;
+}
+.all span{
+  display: inline-block;
+  transition: transform 0.7s ease;
+  transform-style: preserve-3d;
+}
+.all:hover span{
+  transform: rotateX(350deg);
+
 }

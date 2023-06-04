@@ -5,10 +5,23 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
+import { Button, Modal } from "antd";
+import { useState } from "react";
 import { Navigation, Autoplay } from "swiper";
 import PurchaseSecond from "../PurchaseSecondPage/PurchaseSecond";
 import Header from "../Header/Header";
 const Planshet = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const showModal = () => {
+    setIsModalOpen(true);
+  };
+  const handleOk = () => {
+    setIsModalOpen(false);
+  };
+  const handleCancel = () => {
+    setIsModalOpen(false);
+  };
+
   return (
     <div>
       <div className={s.purchaseFirst}>
@@ -36,21 +49,6 @@ const Planshet = () => {
                 <div className={s.purchaseFirst__swiper_container}>
                   <div className={s.purchaseFirst__swipe_title}>
                     <h1>Хит</h1>
-                    <div className={s.card__icon}>
-                      <Image
-                        src="/Image/FirstBlock/Union.png"
-                        alt="Union"
-                        width={14}
-                        height={17}
-                      />
-                      <Image
-                        className={s.product__favorites}
-                        src="/Image/FirstBlock/like.png"
-                        alt="Union"
-                        width={19}
-                        height={18}
-                      />
-                    </div>
                   </div>
                   <Swiper
                     slidesPerView={1}
@@ -95,13 +93,58 @@ const Planshet = () => {
                     <h2>72 190 ₽</h2>
                   </div>
                   <div className={s.purchaseFirst__subtitle_info}>
-                    <Image
-                      src="/Image/FirstBlock/reviews.png"
-                      alt="Reviews"
-                      width={73}
-                      height={12}
-                    />
-                    <a href="#"> Смотреть отзывы </a>
+                    <a href="#" onClick={showModal}>
+                      Смотреть отзывы
+                    </a>
+                    <div className={s.modal}>
+                      <Modal
+                        className={s.modal_modal}
+                        title=""
+                        open={isModalOpen}
+                        onOk={handleOk}
+                        onCancel={handleCancel}
+                      >
+                        <div className={s.all_otziv}>
+                          <div className={s.first_otziv}>
+                            <Image
+                              src="/user.png"
+                              alt="user_img"
+                              width={50}
+                              height={50}
+                            ></Image>
+                            <p>
+                            Я недавно приобрел iPad Air и хотел бы поделиться своими впечатлениями об этом устройстве. Честно говоря, я впечатлен его функциональностью и производительностью.
+                            </p>
+                          </div>
+                          <div className={s.second_otziv}>
+                            <Image
+                              src="/user_girl.png"
+                              alt="user_img"
+                              width={50}
+                              height={50}
+                            ></Image>
+                            <p>
+
+
+Я приобрела iPad Air с большими ожиданиями, но, к сожалению, оказался разочарован этим устройством.
+
+Проблема, с которой я столкнулась, - это низкая жизнь аккумулятора. Даже при умеренном использовании, iPad Air требует постоянного подзарядки. Это приводит к неудобству и ограничивает мобильность устройства.
+                            </p>
+                          </div>
+                          <div className={s.thre_otziv}>
+                            <Image
+                              src="/user_two.png"
+                              alt="user_img"
+                              width={50}
+                              height={50}
+                            ></Image>
+                            <p>
+                              А мне все ок
+                            </p>
+                          </div>
+                        </div>
+                      </Modal>
+                    </div>
                   </div>
                 </div>
                 <div className={s.purchaseFirst__characteristic_info}>

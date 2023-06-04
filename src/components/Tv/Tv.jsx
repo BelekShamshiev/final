@@ -1,14 +1,25 @@
-import React from "react";
+import React, { useState } from "react";
 import s from "../PurchaseFirstPage/PurchaseFirst.module.css";
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
+import { Button, Modal } from "antd"; 
 import { Navigation, Autoplay } from "swiper";
 import PurchaseSecond from "../PurchaseSecondPage/PurchaseSecond";
 import Header from "../Header/Header";
 const Tv = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const showModal = () => {
+    setIsModalOpen(true);
+  };
+  const handleOk = () => {
+    setIsModalOpen(false);
+  };
+  const handleCancel = () => {
+    setIsModalOpen(false);
+  };
   return (
     <div>
       <div className={s.purchaseFirst}>
@@ -32,21 +43,7 @@ const Tv = () => {
                 <div className={s.purchaseFirst__swiper_container}>
                   <div className={s.purchaseFirst__swipe_title}>
                     <h1>Хит</h1>
-                    <div className={s.card__icon}>
-                      <Image
-                        src="/Image/FirstBlock/Union.png"
-                        alt="Union"
-                        width={14}
-                        height={17}
-                      />
-                      <Image
-                        className={s.product__favorites}
-                        src="/Image/FirstBlock/like.png"
-                        alt="Union"
-                        width={19}
-                        height={18}
-                      />
-                    </div>
+                    <div className={s.card__icon}></div>
                   </div>
                   <Swiper
                     slidesPerView={1}
@@ -91,13 +88,59 @@ const Tv = () => {
                     <h2>136 690 ₽</h2>
                   </div>
                   <div className={s.purchaseFirst__subtitle_info}>
-                    <Image
-                      src="/Image/FirstBlock/reviews.png"
-                      alt="Reviews"
-                      width={73}
-                      height={12}
-                    />
-                    <a href="#"> Смотреть отзывы </a>
+                    <a href="#" onClick={showModal}>
+                      Смотреть отзывы
+                    </a>
+                    <div className={s.modal}>
+                      <Modal
+                        className={s.modal_modal}
+                        title=""
+                        open={isModalOpen}
+                        onOk={handleOk}
+                        onCancel={handleCancel}
+                      >
+                        <div className={s.all_otziv}>
+                          <div className={s.first_otziv}>
+                            <Image
+                              src="/user.png"
+                              alt="user_img"
+                              width={50}
+                              height={50}
+                            ></Image>
+                            <p>
+                            Я оцениваю яркость, контрастность и резкость картинки. Каждая деталь отображается с высокой четкостью, цвета яркие и насыщенные.
+                            </p>
+                          </div>
+                          <div className={s.second_otziv}>
+                            <Image
+                              src="/user_girl.png"
+                              alt="user_img"
+                              width={50}
+                              height={50}
+                            ></Image>
+                            <p>
+                            Звук телевизора также впечатляет. Интегрированная аудиосистема создает пространственный и объемный звук, позволяющий погрузиться в атмосферу происходящего на экране. 
+                            </p>
+                          </div>
+                          <div className={s.thre_otziv}>
+                            <Image
+                              src="/user_two.png"
+                              alt="user_img"
+                              width={50}
+                              height={50}
+                            ></Image>
+                            <p>
+                           Я очень доволен этим телевизором и считаю его отличным выбором
+
+
+
+
+
+                            </p>
+                          </div>
+                        </div>
+                      </Modal>
+                    </div>
                   </div>
                 </div>
                 <div className={s.purchaseFirst__characteristic_info}>

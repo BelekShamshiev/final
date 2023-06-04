@@ -1,14 +1,26 @@
-import React from "react";
+import React, { useState } from "react";
 import s from "../PurchaseFirstPage/PurchaseFirst.module.css";
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
+import { Button, Modal } from "antd";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Navigation, Autoplay } from "swiper";
 import PurchaseSecond from "../PurchaseSecondPage/PurchaseSecond";
 import Header from "../Header/Header";
 const Aksesuar = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const showModal = () => {
+    setIsModalOpen(true);
+  };
+  const handleOk = () => {
+    setIsModalOpen(false);
+  };
+  const handleCancel = () => {
+    setIsModalOpen(false);
+  };
+
   return (
     <div>
       <div className={s.purchaseFirst}>
@@ -73,13 +85,54 @@ const Aksesuar = () => {
                     <h2>39 999 ₽</h2>
                   </div>
                   <div className={s.purchaseFirst__subtitle_info}>
-                    <Image
-                      src="/Image/FirstBlock/reviews.png"
-                      alt="Reviews"
-                      width={73}
-                      height={12}
-                    />
-                    <a href="#"> Смотреть отзывы </a>
+                    <a href="#" onClick={showModal}>
+                      Смотреть отзывы
+                    </a>
+                    <div className={s.modal}>
+                      <Modal
+                        className={s.modal_modal}
+                        title=""
+                        open={isModalOpen}
+                        onOk={handleOk}
+                        onCancel={handleCancel}
+                      >
+                        <div className={s.all_otziv}>
+                          <div className={s.first_otziv}>
+                            <Image
+                              src="/user.png"
+                              alt="user_img"
+                              width={50}
+                              height={50}
+                            ></Image>
+                            <p>
+                            Качество звука, предоставляемое AirPods, действительно впечатляет. Звук ясный, чистый и детализированный, а басы достаточно глубокие, чтобы наслаждаться любимой музыкой или прослушивать аудиокниги. 
+                            </p>
+                          </div>
+                          <div className={s.second_otziv}>
+                            <Image
+                              src="/user_girl.png"
+                              alt="user_img"
+                              width={50}
+                              height={50}
+                            ></Image>
+                            <p>
+                            Беспроводное соединение AirPods с устройствами Apple - настоящая находка. Они с легкостью подключаются к iPhone, iPad и MacBook и мгновенно готовы к использованию.
+                            </p>
+                          </div>
+                          <div className={s.thre_otziv}>
+                            <Image
+                              src="/user_two.png"
+                              alt="user_img"
+                              width={50}
+                              height={50}
+                            ></Image>
+                            <p>
+                            В целом, AirPods - это отличные беспроводные наушники.
+                            </p>
+                          </div>
+                        </div>
+                      </Modal>
+                    </div>{" "}
                   </div>
                 </div>
                 <div className={s.purchaseFirst__characteristic_info}>

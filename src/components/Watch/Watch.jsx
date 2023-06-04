@@ -3,12 +3,25 @@ import s from "../PurchaseFirstPage/PurchaseFirst.module.css";
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
+import { Button, Modal } from "antd";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
+import { useState } from "react";
 import { Navigation, Autoplay } from "swiper";
 import PurchaseSecond from "../PurchaseSecondPage/PurchaseSecond";
 import Header from "../Header/Header";
 const Watch = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const showModal = () => {
+    setIsModalOpen(true);
+  };
+  const handleOk = () => {
+    setIsModalOpen(false);
+  };
+  const handleCancel = () => {
+    setIsModalOpen(false);
+  };
+
   return (
     <div>
       <div className={s.purchaseFirst}>
@@ -29,21 +42,6 @@ const Watch = () => {
                 <div className={s.purchaseFirst__swiper_container}>
                   <div className={s.purchaseFirst__swipe_title}>
                     <h1>Хит</h1>
-                    <div className={s.card__icon}>
-                      <Image
-                        src="/Image/FirstBlock/Union.png"
-                        alt="Union"
-                        width={14}
-                        height={17}
-                      />
-                      <Image
-                        className={s.product__favorites}
-                        src="/Image/FirstBlock/like.png"
-                        alt="Union"
-                        width={19}
-                        height={18}
-                      />
-                    </div>
                   </div>
                   <Swiper
                     slidesPerView={1}
@@ -88,13 +86,54 @@ const Watch = () => {
                     <h2>39 999 ₽</h2>
                   </div>
                   <div className={s.purchaseFirst__subtitle_info}>
-                    <Image
-                      src="/Image/FirstBlock/reviews.png"
-                      alt="Reviews"
-                      width={73}
-                      height={12}
-                    />
-                    <a href="#"> Смотреть отзывы </a>
+                    <a href="#" onClick={showModal}>
+                      Смотреть отзывы
+                    </a>
+                    <div className={s.modal}>
+                      <Modal
+                        className={s.modal_modal}
+                        title=""
+                        open={isModalOpen}
+                        onOk={handleOk}
+                        onCancel={handleCancel}
+                      >
+                        <div className={s.all_otziv}>
+                          <div className={s.first_otziv}>
+                            <Image
+                              src="/user.png"
+                              alt="user_img"
+                              width={50}
+                              height={50}
+                            ></Image>
+                            <p>
+                            Я приобрел Apple Watch несколько месяцев назад, и с уверенностью могу сказать, что это одно из лучших технологических приобретений, которые я сделал.
+                            </p>
+                          </div>
+                          <div className={s.second_otziv}>
+                            <Image
+                              src="/user_girl.png"
+                              alt="user_img"
+                              width={50}
+                              height={50}
+                            ></Image>
+                            <p>
+                            дизайн Apple Watch поражает. Он прекрасно сочетается с любым стилем одежды и может быть использован как в повседневных ситуациях, так и при формальных мероприятиях.
+                            </p>
+                          </div>
+                          <div className={s.thre_otziv}>
+                            <Image
+                              src="/user_two.png"
+                              alt="user_img"
+                              width={50}
+                              height={50}
+                            ></Image>
+                            <p>
+                            Функциональность Apple Watch просто впечатляет. Я могу получать уведомления о звонках, сообщениях и календарных событиях прямо на запястье.
+                            </p>
+                          </div>
+                        </div>
+                      </Modal>
+                    </div>
                   </div>
                 </div>
                 <div className={s.purchaseFirst__characteristic_info}>
@@ -104,7 +143,7 @@ const Watch = () => {
                     </div>
                     <div className={s.characteristic_info_first_btn}>
                       <button>
-                      Умные часы Apple Watch Series 8 41 мм Aluminium Case
+                        Умные часы Apple Watch Series 8 41 мм Aluminium Case
                       </button>
                     </div>
                   </div>
@@ -113,14 +152,11 @@ const Watch = () => {
                       <div className={s.info_second_content}>
                         <h1>Цвет:</h1>
                         <p>beige</p>
-                       
                       </div>
                       <div className={s.info_second_title}></div>
                     </div>
                     <div className={s.characteristic_info_second_2}>
-                      <div className={s.info_second_2}>
-                        
-                      </div>
+                      <div className={s.info_second_2}></div>
                       <div className={s.info_second_2_down}>
                         <h1>Экран:</h1>
                         <button>8,42mm</button>

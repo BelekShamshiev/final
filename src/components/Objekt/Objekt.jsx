@@ -12,7 +12,7 @@ const Objekt = ({ img, title, oldprice, price }) => {
       transition={{
         opacity: { ease: "linear" },
         layout: { duration: 0.5 },
-        duration: 0.1,
+        duration: 0.5,
       }}
       initial="hidden"
       whileInView="visible"

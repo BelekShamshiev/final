@@ -1,56 +1,60 @@
-import { laptop } from "@/constans/Laptop";
-import LaptopTitle from "./LaptopTitle/LaptopTitle";
 import React, { useState } from "react";
-import s from "./Laptop.module.css";
+import LaptopTitle from "./LaptopTitle/LaptopTitle";
 import Footer from "../footer/Footer";
 import Header from "../Header/Header";
+import styles from "./Laptop.module.css";
+import { laptop } from "@/constans/Laptop";
+
 const Laptop = () => {
   const [select, setSelect] = useState("");
+  const [filteredLaptops, setFilteredLaptops] = useState(laptop);
+
+  const handleFilterChange = (e) => {
+    const selectedPrice = e.target.value;
+    setSelect(selectedPrice);
+
+    if (selectedPrice === "") {
+      setFilteredLaptops(laptop);
+    } else {
+      const filtered = laptop.filter(
+        (item) => item.price <= parseInt(selectedPrice)
+      );
+      setFilteredLaptops(filtered);
+    }
+  };
+
   return (
-    <div className={s.container}>
+    <div className={styles.container}>
       <Header />
-      <div className={s.home}>
-        <div className={s.filter}>
-          <div className={s.filter_brend}>
+      <div className={styles.home}>
+        <div className={styles.filter}>
+          <div className={styles.filter_brend}>
             <h1>Фильтр по параметрам</h1>
             <select
-              className={s.filter_brend_select}
+              className={styles.filter_brend_select}
               value={select}
-              onChange={(e) => setSelect(e.target.value)}
-              name=""
-              id=""
+              onChange={handleFilterChange}
             >
-              <option className={s.option} value="Apple">
-                {" "}
-                <input type="checkbox" />
-                Apple
-              </option>
-              <option className={s.option} value="Samsung">
-                {" "}
-                <input type="checkbox" />
-                Samsung
-              </option>
-              <option className={s.option} value="Xiaomi">
-                {" "}
-                <input type="checkbox" /> Xiaomi
-              </option>
+              <option value="">All</option>
+              <option value="50000">50000</option>
+              <option value="80000">80000</option>
+              <option value="100000">100000</option>
             </select>
           </div>
         </div>
-        <div className={s.card}>
-          {laptop.map((item) => {
-            return (
-              <LaptopTitle
-                id={item.id}
-                img={item.img}
-                title={item.title}
-                oldprice={item.oldprice}
-                price={item.price}
-              />
-            );
-          })}
+        <div className={styles.card}>
+          {filteredLaptops.map((item) => (
+            <LaptopTitle
+              key={item.id}
+              id={item.id}
+              img={item.img}
+              title={item.title}
+              oldprice={item.oldprice}
+              price={item.price}
+            />
+          ))}
         </div>
-      </div>{" "}
+      </div>
       <Footer />
     </div>
   );

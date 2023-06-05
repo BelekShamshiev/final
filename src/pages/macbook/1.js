@@ -1,4 +1,4 @@
-import Makbook from '@/components/Makbook/Makbook';
+import Makbook from '@/components/Makbook/[id]';
 import React from 'react';
 
 const macbook = () => {

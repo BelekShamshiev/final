@@ -1,12 +1,26 @@
-import React from "react";
+import React, { useState } from "react";
 import s from "../Mobile/Mobile.module.css";
-import { useState } from "react";
 import Header from "../Header/Header";
-import { watch } from "@/constans/watch";
 import AppleWatchCart from "./AppleWatchCart/AppleWatchCart";
 import { applewatch } from "@/constans/applewatch";
+
 const AppleWatch = () => {
   const [select, setSelect] = useState("");
+  const [filteredAppleWatches, setFilteredAppleWatches] = useState(applewatch);
+
+  const handleFilterChange = (e) => {
+    const selectedPrice = e.target.value;
+    setSelect(selectedPrice);
+
+    if (selectedPrice === "") {
+      setFilteredAppleWatches(applewatch);
+    } else {
+      const filtered = applewatch.filter(
+        (item) => item.price <= parseInt(selectedPrice)
+      );
+      setFilteredAppleWatches(filtered);
+    }
+  };
 
   return (
     <div className={s.container}>
@@ -18,39 +32,30 @@ const AppleWatch = () => {
             <select
               className={s.filter_brend_select}
               value={select}
-              onChange={(e) => setSelect(e.target.value)}
-              name=""
-              id=""
+              onChange={handleFilterChange}
             >
-              <option className={s.option} value="Apple">
-                {" "}
-                <input type="checkbox" />
-                Apple
-              </option>
-              <option className={s.option} value="Samsung">
-                {" "}
-                <input type="checkbox" />
-                Samsung
-              </option>
-              <option className={s.option} value="Xiaomi">
-                {" "}
-                <input type="checkbox" /> Xiaomi
-              </option>
+              <option value="">All</option>
+              <option value="40000">40000</option>
+              <option value="50000">50000</option>
+              <option value="60000">60000</option>
+              <option value="70000">70000</option>
+              <option value="80000">80000</option>
+              <option value="90000">90000</option>
+              <option value="100000">100000</option>
             </select>
           </div>
         </div>
         <div className={s.card}>
-          {applewatch.map((item) => {
-            return (
-              <AppleWatchCart
-                id={item.id}
-                img={item.img}
-                title={item.title}
-                oldprice={item.oldprice}
-                price={item.price}
-              ></AppleWatchCart>
-            );
-          })}
+          {filteredAppleWatches.map((item) => (
+            <AppleWatchCart
+              key={item.id}
+              id={item.id}
+              img={item.img}
+              title={item.title}
+              oldprice={item.oldprice}
+              price={item.price}
+            />
+          ))}
         </div>
       </div>
     </div>

@@ -138,9 +138,11 @@ const Fifth = () => {
               {errors.contactMethod && (
                 <p className={styles.error}>{errors.contactMethod}</p>
               )}
-              <a href="/obratka">
-              <button  onClick={handleSubmit}>Отправить</button>
-              </a>
+                <button  onClick={handleSubmit}>
+                  <Link href="/obratka">
+                    Отправить
+                  </Link>
+                </button>
               <div className={styles.form__checkbox}>
                 <input
                   type="checkbox"

@@ -3,7 +3,10 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import styles from "../../Laptop/LaptopTitle/LaptopTitle.module.css";
-const AppleWatchCart = ({ img, title, oldprice, price}) => {
+import { useRouter } from "next/router";
+const AppleWatchCart = ({ img, title, oldprice, id, price }) => {
+  const router = useRouter();
+
   return (
     <div>
       <motion.div
@@ -48,7 +51,12 @@ const AppleWatchCart = ({ img, title, oldprice, price}) => {
                   <h2>{price}₽</h2>
                 </div>
                 <div>
-                  <Link className={styles.btn} href="/watch">Купить</Link>
+                  <button
+                    className={styles.btn}
+                    onClick={() => router.push(`/watch/${id}`)}
+                  >
+                    Купить
+                  </button>
                 </div>
               </div>
               <div className={styles.info}></div>

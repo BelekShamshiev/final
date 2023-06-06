@@ -51,6 +51,7 @@ const Mobile = () => {
           {filteredMobiles.map((item) => (
             <MobilePhone
               key={item.id}
+              id={item.id}
               img={item.img}
               title={item.title}
               oldprice={item.oldprice}

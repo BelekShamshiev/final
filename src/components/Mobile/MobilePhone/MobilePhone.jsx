@@ -1,30 +1,30 @@
 import React from "react";
 import styles from "./MobilePhone.module.css";
 import Image from "next/image";
-import {motion} from "framer-motion"
+import { motion } from "framer-motion";
 import Link from "next/link";
 import Information from "@/components/Information/Information";
-const MobilePhone = ({ img, title, oldprice, price }) => {
+import { useRouter } from "next/router";
+const MobilePhone = ({ img, title, oldprice, id, price }) => {
+  const router = useRouter()
   return (
     <div>
-      <motion.div className={styles.second__item}
-      
-      layout
-			transition={{
-				opacity: { ease: "linear" },
-				layout: { duration: 0.5 },
-				duration: 0.7,
-			}}
-			initial="hidden"
-			// transition={{ duration: 0.6 }}
-			whileInView="visible"
-			variants={
-				{
-					hidden: { scale: 0 },
-					visible: { scale: 1 }
-
-				}
-			}>
+      <motion.div
+        className={styles.second__item}
+        layout
+        transition={{
+          opacity: { ease: "linear" },
+          layout: { duration: 0.5 },
+          duration: 0.7,
+        }}
+        initial="hidden"
+        // transition={{ duration: 0.6 }}
+        whileInView="visible"
+        variants={{
+          hidden: { scale: 0 },
+          visible: { scale: 1 },
+        }}
+      >
         <div className={styles.second__card_container}>
           <div className={styles.second__card_body}>
             <div className={styles.second__card_title}>
@@ -45,9 +45,7 @@ const MobilePhone = ({ img, title, oldprice, price }) => {
                   <h2>{price}₽</h2>
                 </div>
                 <div>
-                  <Link className={styles.btn} href="/second">
-                    Купить
-                  </Link>
+                <button  className={styles.btn} onClick={() => router.push(`/mobil/${id}`)} >Купить</button>
                 </div>
               </div>
               <div className={styles.info}>
@@ -55,9 +53,9 @@ const MobilePhone = ({ img, title, oldprice, price }) => {
               </div>
             </div>
           </div>
-        </div>     
-         </motion.div>
-      </div>
+        </div>
+      </motion.div>
+    </div>
   );
 };
 

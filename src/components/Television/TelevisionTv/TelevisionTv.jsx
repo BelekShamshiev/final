@@ -4,8 +4,9 @@ import Link from 'next/link';
 import Image from 'next/image'; 
 import {motion} from "framer-motion"
 import Information from '@/components/Information/Information';
-    const TelevisionTv = ({ img, title, oldprice, price }) => {
-    
+import { useRouter } from 'next/router';
+    const TelevisionTv = ({ img, title, id , oldprice, price }) => {
+      const router = useRouter()
     return (
         <div>
              <motion.div className={styles.second__item}
@@ -48,7 +49,7 @@ import Information from '@/components/Information/Information';
                   <h2>{price}₽</h2>
                 </div>
                 <div>
-                <Link className={styles.btn} href='/tv'>Купить</Link>
+                <button  className={styles.btn} onClick={() => router.push(`/television/${id}`)} >Купить</button>  
                 </div>
               </div>
               <div className={styles.info}>

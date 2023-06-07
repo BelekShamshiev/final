@@ -130,6 +130,9 @@
   bottom: 80px;
   text-align: center;
 }
+.banner__slide_content_tre p{
+  color:white;
+}
 .xiaomi_btn {
   background: yellow;
   color: #ffffff;

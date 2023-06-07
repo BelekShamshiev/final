@@ -62,11 +62,10 @@
 }
 .title_right h1{
     font-size: 45px;
-    padding-left: 30px;
+    padding-left: 85px;
 }
 .title_right_photo img{
     padding-top: 15px;
-    width: 300px;
     cursor: pointer;
 }
 .h{

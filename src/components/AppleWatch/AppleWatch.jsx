@@ -35,13 +35,11 @@ const AppleWatch = () => {
               onChange={handleFilterChange}
             >
               <option value="">All</option>
+              <option value="20000">20000</option>
+              <option value="25000">25000</option>
               <option value="40000">40000</option>
-              <option value="50000">50000</option>
               <option value="60000">60000</option>
-              <option value="70000">70000</option>
-              <option value="80000">80000</option>
-              <option value="90000">90000</option>
-              <option value="100000">100000</option>
+              <option value="70000">MAX</option>
             </select>
           </div>
         </div>

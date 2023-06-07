@@ -10,6 +10,7 @@ import PurchaseSecond from "../PurchaseSecondPage/PurchaseSecond";
 import Header from "../Header/Header";
 import { useState } from "react";
 import Information from "../Information/Information";
+import Link from "next/link";
 
 const PurchaseFirst = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -48,9 +49,7 @@ const PurchaseFirst = () => {
               <div className={s.purchaseFirst__swiper_container}>
                 <div className={s.purchaseFirst__swipe_title}>
                   <h1>Хит</h1>
-                  <div className={s.card__icon}>
-
-                  </div>
+                  <div className={s.card__icon}></div>
                 </div>
                 <Swiper
                   slidesPerView={1}
@@ -99,44 +98,53 @@ const PurchaseFirst = () => {
                     Смотреть отзывы
                   </a>
                   <div className={s.modal}>
-                    <Modal className={s.modal_modal}
+                    <Modal
+                      className={s.modal_modal}
                       title=""
                       open={isModalOpen}
                       onOk={handleOk}
                       onCancel={handleCancel}
                     >
                       <div className={s.all_otziv}>
-                      <div className={s.first_otziv}>
-                        <Image
-                          src="/user.png"
-                          alt="user_img"
-                          width={50}
-                          height={50}
-                        ></Image>
-                        <p>
-                          Я хотел бы поделиться своим впечатлением о новом
-                          телефоне, который я недавно приобрел. Этот телефон -
-                          настоящая находка!
-                        </p>
-                      </div>
-                      <div className={s.second_otziv}>
-                      <Image
-                          src="/user_girl.png"
-                          alt="user_img"
-                          width={50}
-                          height={50}
-                        ></Image>
-                        <p>Экран этого телефона просто великолепен. Он яркий, четкий и цветопередача на высшем уровне. </p>
-                      </div>
-                      <div className={s.thre_otziv}>
-                      <Image
-                          src="/user_two.png"
-                          alt="user_img"
-                          width={50}
-                          height={50}
-                        ></Image>
-                        <p>Качество камеры этого телефона просто поражает. Он оснащен задней камерой, которая делает потрясающие фотографии и видео даже в условиях низкой освещенности.</p>
-                      </div>
+                        <div className={s.first_otziv}>
+                          <Image
+                            src="/user.png"
+                            alt="user_img"
+                            width={50}
+                            height={50}
+                          ></Image>
+                          <p>
+                            Я хотел бы поделиться своим впечатлением о новом
+                            телефоне, который я недавно приобрел. Этот телефон -
+                            настоящая находка!
+                          </p>
+                        </div>
+                        <div className={s.second_otziv}>
+                          <Image
+                            src="/user_girl.png"
+                            alt="user_img"
+                            width={50}
+                            height={50}
+                          ></Image>
+                          <p>
+                            Экран этого телефона просто великолепен. Он яркий,
+                            четкий и цветопередача на высшем уровне.{" "}
+                          </p>
+                        </div>
+                        <div className={s.thre_otziv}>
+                          <Image
+                            src="/user_two.png"
+                            alt="user_img"
+                            width={50}
+                            height={50}
+                          ></Image>
+                          <p>
+                            Качество камеры этого телефона просто поражает. Он
+                            оснащен задней камерой, которая делает потрясающие
+                            фотографии и видео даже в условиях низкой
+                            освещенности.
+                          </p>
+                        </div>
                       </div>
                     </Modal>
                   </div>
@@ -210,7 +218,9 @@ const PurchaseFirst = () => {
                 </div>
               </div>
               <div className={s.purchaseFirst__bottom_info}>
-                <button>Купить</button>
+                <Link href="/pay">
+                  <button>Купить</button>
+                </Link>
                 <div>
                   <p>
                     <Image

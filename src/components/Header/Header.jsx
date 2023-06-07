@@ -130,7 +130,7 @@ const Header = () => {
                 </div>
               </div>
               <div className={s.header_down}>
-                <Link href="/product" className={s.catalog}>
+                <Link href="/catalog" className={s.catalog}>
                   Каталог
                 </Link>
                 <Link href="/mobil" className={s.iphone}>

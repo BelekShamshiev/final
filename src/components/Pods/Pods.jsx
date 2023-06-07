@@ -1,11 +1,26 @@
-import React from "react";
+import React, { useState } from "react";
 import s from "../Mobile/Mobile.module.css";
-import { useState } from "react";
 import Header from "../Header/Header";
-import { pods } from "@/constans/pods";
 import PodsCart from "./Podscart/PodsCart";
+import { pods } from "@/constans/pods";
+
 const Pods = () => {
   const [select, setSelect] = useState("");
+  const [filteredPods, setFilteredPods] = useState(pods);
+
+  const handleFilterChange = (e) => {
+    const selectedPrice = e.target.value;
+    setSelect(selectedPrice);
+
+    if (selectedPrice === "") {
+      setFilteredPods(pods);
+    } else {
+      const filtered = pods.filter(
+        (item) => item.price <= parseInt(selectedPrice)
+      );
+      setFilteredPods(filtered);
+    }
+  };
 
   return (
     <div className={s.container}>
@@ -17,39 +32,28 @@ const Pods = () => {
             <select
               className={s.filter_brend_select}
               value={select}
-              onChange={(e) => setSelect(e.target.value)}
-              name=""
-              id=""
+              onChange={handleFilterChange}
             >
-              <option className={s.option} value="Apple">
-                {" "}
-                <input type="checkbox" />
-                Apple
-              </option>
-              <option className={s.option} value="Samsung">
-                {" "}
-                <input type="checkbox" />
-                Samsung
-              </option>
-              <option className={s.option} value="Xiaomi">
-                {" "}
-                <input type="checkbox" /> Xiaomi
-              </option>
+              <option value="">All</option>
+              <option value="25000">25000</option>
+              <option value="40000">40000</option>
+              <option value="9000">9000</option>
+              <option value="60000">60000</option>
+              <option value="2000">2000</option>
+              <option value="35000">35000</option>
             </select>
           </div>
         </div>
         <div className={s.card}>
-          {pods.map((item) => {
-            return (
-              <PodsCart
-                id={item.id}
-                img={item.img}
-                title={item.title}
-                oldprice={item.oldprice}
-                price={item.price}
-              ></PodsCart>
-            );
-          })}
+          {filteredPods.map((item) => (
+            <PodsCart
+              key={item.id}
+              img={item.img}
+              title={item.title}
+              oldprice={item.oldprice}
+              price={item.price}
+            />
+          ))}
         </div>
       </div>
     </div>

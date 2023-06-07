@@ -1,16 +1,16 @@
-import Basket from '@/components/Basket/Basket';
 import Header from '@/components/Header/Header';
+import PayFirst from '@/components/PayFirst/PayFirst';
 import Footer from '@/components/footer/Footer';
 import React from 'react';
 
-const basket = () => {
+const pay = () => {
     return (
         <div>
             <Header/>
-            <Basket/>   
-            <Footer/>
+            <PayFirst/>
+            <Footer/> 
         </div>
     );
 };
 
-export default basket;
+export default pay;

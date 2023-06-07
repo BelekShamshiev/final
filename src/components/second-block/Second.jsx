@@ -28,7 +28,7 @@ const Second = () => {
               <span>Новинки</span>
             </button>
             <button onClick={handleCardSwap}>
-              <span> Лидеры продаж</span>
+              <span>Лидеры продаж</span>
             </button>
             <div className={styles.watch_all}>
               <Link href="/catalog">
@@ -40,13 +40,16 @@ const Second = () => {
           </div>
 
           <div className={styles.second__card}>
-            {tovarList.map((item) => (
+            {tovarList.map((item, index) => (
               <SecondCard
                 key={item.id}
                 img={item.img}
                 title={item.title}
                 oldprice={item.oldprice}
                 price={item.price}
+                style={{
+                  transitionDelay: `${index * 100}ms`,
+                }}
               />
             ))}
           </div>

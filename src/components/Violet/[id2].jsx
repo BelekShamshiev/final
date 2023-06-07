@@ -10,6 +10,7 @@ import PurchaseSecond from "../PurchaseSecondPage/PurchaseSecond";
 import Header from "../Header/Header";
 import { useState } from "react";
 import Information from "../Information/Information";
+import Link from "next/link";
 const Violet = () => {
     const [isModalOpen, setIsModalOpen] = useState(false);
     const showModal = () => {
@@ -233,7 +234,9 @@ const Violet = () => {
                   </div>
                 </div>
                 <div className={s.purchaseFirst__bottom_info}>
+                  <Link href="/pay">
                   <button>Купить</button>
+                  </Link>
                   <div>
                     <p>
                       <Image

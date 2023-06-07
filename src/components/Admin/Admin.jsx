@@ -25,7 +25,7 @@ const Admin = () => {
       } 
       >
       <div className={s.first}>
-          <Link href="/">
+          <Link href="upload">
             <div className={s.first_back}>
               <h1></h1>
             </div>

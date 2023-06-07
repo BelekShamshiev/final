@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import s from "./PayForm.module.css";
+import s from "./PayFirst.module.css";
 import { Checkbox, Button, Input } from "antd";
 import { Modal } from "antd";
 import m from "../PurchaseFirstPage/PurchaseFirst.module.css";
 import Image from "next/image";
-const PayForm = () => {
+const PayFirst = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const showModal = () => {
     setIsModalOpen(true);
@@ -109,7 +109,13 @@ const PayForm = () => {
         <div className={s.title_right}>
           <h1>Ваш Товар</h1>
           <div className={s.title_right_photo}>
-            <img onClick={showModal} src="/iphone.svg" alt="violet" />
+            <Image
+              onClick={showModal}
+              src="/iphone.svg"
+              alt="violet"
+              width={400}
+              height={300}
+            />
             <div className={m.modal}>
               <Modal
                 className={s.modal_modal}
@@ -128,7 +134,8 @@ const PayForm = () => {
                     ></Image>
                     <h2 className={s.h}>103 899₽</h2>
                     <p>
-                    Смартфон Apple iPhone 12 4/128 ГБ, nano SIM+eSIM
+                      Смартфон Apple iPhone 13 4/128 ГБ, nano SIM+eSIM,
+                      фиолетовый
                     </p>
                   </div>
                 </div>
@@ -141,4 +148,4 @@ const PayForm = () => {
   );
 };
 
-export default PayForm;
+export default PayFirst;

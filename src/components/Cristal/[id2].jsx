@@ -31,9 +31,8 @@ const Cristal = () => {
               <a href="#"> Смартфоны /</a>
               <a href="#"> Apple /</a>
               <span>
-                {" "}
                 Basis sind eine Quadcore-CPU, 16 GB Speicher und Android 5.0
-                (Lollipop).{" "}
+                (Lollipop).
               </span>
             </div>
             <div className={s.purchaseFirst__title}>

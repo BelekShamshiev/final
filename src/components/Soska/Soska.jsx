@@ -3,14 +3,14 @@ import s from "../PurchaseFirstPage/PurchaseFirst.module.css";
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
+import { Button, Modal } from "antd";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-import { Button, Modal } from "antd";
 import { useState } from "react";
 import { Navigation, Autoplay } from "swiper";
 import PurchaseSecond from "../PurchaseSecondPage/PurchaseSecond";
 import Header from "../Header/Header";
-const Planshet = () => {
+const Soska = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const showModal = () => {
     setIsModalOpen(true);
@@ -32,16 +32,10 @@ const Planshet = () => {
               <a href="#"> Главная /</a>
               <a href="#"> Смартфоны /</a>
               <a href="#"> Apple /</a>
-              <span>
-                Планшет Apple iPad Air (2022) 10.9 Wi-Fi 64Gb серый космос
-                (MM9C3)
-              </span>
+              <span>Apple Watch Series 8 GPS + Cellular 45mm Graphite Stainless Steel</span>
             </div>
             <div className={s.purchaseFirst__title}>
-              <h1>
-                Планшет Apple iPad Air (2022) 10.9 Wi-Fi 64Gb серый космос
-                (MM9C3)
-              </h1>
+              <h1>Apple Watch Series 8 GPS + Cellular 45mm Graphite Stainless Steel </h1>
             </div>
             <div className={s.purchaseFirst__content}>
               <div className={s.purchaseFirst__swiper}>
@@ -65,7 +59,7 @@ const Planshet = () => {
                     <SwiperSlide>
                       <div className={s.purchaseFirst_slide}>
                         <Image
-                          src="/ipad.svg"
+                          src="/afaf.jpg"
                           alt="Smartfon"
                           width={362}
                           height={362}
@@ -75,7 +69,7 @@ const Planshet = () => {
                     <SwiperSlide>
                       <div className={s.purchaseFirst_slide}>
                         <Image
-                          src="/ipad.svg"
+                          src="/afaf.jpg"
                           alt="Smartfon"
                           width={362}
                           height={362}
@@ -88,8 +82,8 @@ const Planshet = () => {
               <div className={s.purchaseFirst__characteristic}>
                 <div className={s.purchaseFirst__characteristic_title}>
                   <div className={s.purchaseFirst__title_info}>
-                    <h1>66 990 ₽</h1>
-                    <h2>72 190 ₽</h2>
+                    <h1>54 836₽</h1>
+                    <h2>60 340 ₽</h2>
                   </div>
                   <div className={s.purchaseFirst__subtitle_info}>
                     <a href="#" onClick={showModal}>
@@ -112,7 +106,10 @@ const Planshet = () => {
                               height={50}
                             ></Image>
                             <p>
-                            Я недавно приобрел iPad Air и хотел бы поделиться своими впечатлениями об этом устройстве. Честно говоря, я впечатлен его функциональностью и производительностью.
+                              Я приобрел Apple Watch несколько месяцев назад, и
+                              с уверенностью могу сказать, что это одно из
+                              лучших технологических приобретений, которые я
+                              сделал.
                             </p>
                           </div>
                           <div className={s.second_otziv}>
@@ -123,11 +120,10 @@ const Planshet = () => {
                               height={50}
                             ></Image>
                             <p>
-
-
-Я приобрела iPad Air с большими ожиданиями, но, к сожалению, оказался разочарован этим устройством.
-
-Проблема, с которой я столкнулась, - это низкая жизнь аккумулятора. Даже при умеренном использовании, iPad Air требует постоянного подзарядки. Это приводит к неудобству и ограничивает мобильность устройства.
+                              дизайн Apple Watch поражает. Он прекрасно
+                              сочетается с любым стилем одежды и может быть
+                              использован как в повседневных ситуациях, так и
+                              при формальных мероприятиях.
                             </p>
                           </div>
                           <div className={s.thre_otziv}>
@@ -138,7 +134,9 @@ const Planshet = () => {
                               height={50}
                             ></Image>
                             <p>
-                              А мне все ок
+                              Функциональность Apple Watch просто впечатляет. Я
+                              могу получать уведомления о звонках, сообщениях и
+                              календарных событиях прямо на запястье.
                             </p>
                           </div>
                         </div>
@@ -153,60 +151,22 @@ const Planshet = () => {
                     </div>
                     <div className={s.characteristic_info_first_btn}>
                       <button>
-                        Планшет Apple iPad Air (2022) 10.9 Wi-Fi 64Gb серый
-                        космос (MM9C3)
-                      </button>
+                      Apple Watch Series 8 GPS + Cellular 45mm Graphite Stainless Steel                      </button>
                     </div>
                   </div>
                   <div className={s.characteristic_info_second}>
                     <div className={s.characteristic_info_second_1}>
                       <div className={s.info_second_content}>
                         <h1>Цвет:</h1>
-                        <div className={s.info_second_content_btn}>
-                          <button>
-                            <Image
-                              src="/Image/Purchaseimg/checkmark.svg"
-                              alt="Smartfon"
-                              width={17}
-                              height={13.5}
-                            />
-                          </button>
-                          <button>
-                            <Image
-                              src="/Image/Purchaseimg/checkmark.svg"
-                              alt="Smartfon"
-                              width={17}
-                              height={13.5}
-                            />
-                          </button>
-                          <button>
-                            <Image
-                              src="/Image/Purchaseimg/checkmark.svg"
-                              alt="Smartfon"
-                              width={17}
-                              height={13.5}
-                            />
-                          </button>
-                        </div>
-                        <p>black</p>
-                        <h1>Оперативная память:</h1>
-                        <button className={s.info_second_content_btn_2}>
-                          8 GB
-                        </button>
+                        <p>beige</p>
                       </div>
                       <div className={s.info_second_title}></div>
                     </div>
                     <div className={s.characteristic_info_second_2}>
-                      <div className={s.info_second_2}>
-                        <h1>Встроенная память:</h1>
-                        <div>
-                          <button>128 GB</button>
-                          <button>256 GB</button>
-                        </div>
-                      </div>
+                      <div className={s.info_second_2}></div>
                       <div className={s.info_second_2_down}>
                         <h1>Экран:</h1>
-                        <button>10.9"</button>
+                        <button>45mm</button>
                       </div>
                     </div>
                   </div>
@@ -253,4 +213,4 @@ const Planshet = () => {
   );
 };
 
-export default Planshet;
+export default Soska;

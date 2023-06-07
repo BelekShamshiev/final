@@ -36,6 +36,10 @@ a {
 }
 button{
   cursor: pointer;
+  color: white;
+}
+Button{
+  color: white;
 }
 input{
   color: #3e4d31;

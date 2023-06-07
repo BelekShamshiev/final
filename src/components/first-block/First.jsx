@@ -29,9 +29,9 @@ const First = () => {
                     <h1>Большой</h1>
                     <h1>и еще больше</h1>
                     < p>
-                      Iphone 14 pro и Iphone 14 <br /> pro Max уже в продаже.{" "}
+                      Iphone 14 pro и Iphone 14 <br /> pro Max уже в продаже.
                     </p>
-                    <Link href="/second">
+                    <Link href="/mobil">
                     <button>Купить</button>
                     </Link>
                   </div>
@@ -43,9 +43,9 @@ const First = () => {
                     <h1>Лучший</h1>
                     <h1>И еще лучше</h1>
                     <p>
-                      Apple Watch Series 6 <br />уже в продаже.{" "}
+                      Apple Watch Series 6 <br />уже в продаже.
                     </p>
-                    <Link href="/second">
+                    <Link href="/applewatch">
                     <button className={styles.watch_btn}>Купить</button>
                     </Link>
                   </div>
@@ -57,9 +57,9 @@ const First = () => {
                     <h1>Функциональный</h1>
                     <h1>и еще функцианальней</h1>
                     <p>
-                      Xiaomi 13 и 13pro <br /> pro Max уже в продаже.{" "}
+                      Xiaomi 13 и 13pro <br /> pro Max уже в продаже.
                     </p>
-                    <Link href="/second">
+                    <Link href="/mobil/1">
                     <button className={styles.xiaomi_btn}>Купить</button>
                     </Link>
                   </div>
@@ -88,28 +88,17 @@ const First = () => {
                     <SwiperSlide>
                       <div className={styles.banner__product_slide}>
                         <Image
-                          src="/Image/FirstBlock/apple-watch.png"
+                          src="/afaf.jpg"
                           alt="Apple-Watch"
-                          width={128}
-                          height={151}
-                        />
-                      </div>
-                    </SwiperSlide>
-                    <SwiperSlide>
-                      <div className={styles.banner__product_slide}>
-                        <Image
-                          src="/Image/FirstBlock/apple-watch.png"
-                          alt="Apple-Watch"
-                          width={128}
-                          height={151}
+                          width={188}
+                          height={181}
                         />
                       </div>
                     </SwiperSlide>
                   </Swiper>
                   <div className={styles.banner__product_info}>
                     <p>
-                      Умные часы Apple Watch SE 40 мм <br /> Aluminium Case,
-                      серебристый/синий омут
+                    Apple Watch Series 8 GPS + Cellular 45mm Graphite Stainless Steel
                     </p>
                     <Image
                       src="/Image/FirstBlock/reviews.png"
@@ -119,11 +108,11 @@ const First = () => {
                     />
                     <div className={styles.product_info_subtitle}>
                       <div>
-                        <p>33 990 ₽</p>
-                        <h2>31 990 ₽</h2>
+                        <p>60 340 ₽</p>
+                        <h2>54 836 ₽</h2>
                       </div>
                       <div>
-                      <Link href="/second">
+                      <Link href="/watch/3">
                         <button>Купить</button>
                         </Link>
                       </div>

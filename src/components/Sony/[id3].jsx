@@ -31,12 +31,14 @@ const Cristal = () => {
               <a href="#"> Смартфоны /</a>
               <a href="#"> Apple /</a>
               <span>
-                Why the Sony X950H is tech expert Whitson Gordon's 'TV Soulmate.                (Lollipop).{" "}
+                Why the Sony X950H is tech expert Whitson Gordon's 'TV Soulmate.
+                (Lollipop).
               </span>
             </div>
             <div className={s.purchaseFirst__title}>
               <h1>
-              Why the Sony X950H is tech expert Whitson Gordon's 'TV Soulmate.              </h1>
+                Why the Sony X950H is tech expert Whitson Gordon's 'TV Soulmate.{" "}
+              </h1>
             </div>
             <div className={s.purchaseFirst__content}>
               <div className={s.purchaseFirst__swiper}>

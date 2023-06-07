@@ -36,7 +36,6 @@ const Information = () => {
                   Москва, ул. Барклая, д. 8  <br /> ТЦ Горбушка (старая),
                   павильоны 108/1, 185, 140/6
                 </h3>
-                {/* <img src="./time.svg" alt="" /> */}
                 <p>Часы работы: с 10:00 до 21:00 без выходных</p>
               </div>
             </div>
@@ -45,7 +44,7 @@ const Information = () => {
                 <div className={s.fouth__item_logo}>
                   <Image
                     src="/Image/FourthImg/info.png"
-                    alt=""
+                    alt="logo"
                     width={23}
                     height={23}
                   />
@@ -58,7 +57,7 @@ const Information = () => {
                 <div className={s.fouth__item_logo}>
                   <Image
                     src="/Image/FourthImg/info.png"
-                    alt=""
+                    alt="info"
                     width={23}
                     height={23}
                   />
@@ -71,7 +70,7 @@ const Information = () => {
                 <div className={s.fouth__item_logo}>
                   <Image
                     src="/Image/FourthImg/info.png"
-                    alt=""
+                    alt="info"
                     width={23}
                     height={23}
                   />
@@ -111,40 +110,40 @@ const Information = () => {
           className={s.fourth_swiper}
         >
           <SwiperSlide>
-            <img className={s.swiper_img} src="./Image/apple.png" alt="" />
+            <img className={s.swiper_img} src="./Image/apple.png" alt="apple" />
           </SwiperSlide>
           <SwiperSlide>
-            <img className={s.swiper_img} src="./Image/apple.png" alt="" />
+            <img className={s.swiper_img} src="./Image/apple.png" alt="aplle" />
           </SwiperSlide>
           <SwiperSlide>
-            <img className={s.swiper_img} src="./Image/apple.png" alt="" />
+            <img className={s.swiper_img} src="./Image/apple.png" alt="apple" />
           </SwiperSlide>
           <SwiperSlide>
-            <img className={s.swiper_img} src="./Image/apple.png" alt="" />
+            <img className={s.swiper_img} src="./Image/apple.png" alt="apple" />
           </SwiperSlide>
           <SwiperSlide>
-            <img className={s.swiper_img} src="./Image/apple.png" alt="" />
+            <img className={s.swiper_img} src="./Image/apple.png" alt="apple" />
           </SwiperSlide>
           <SwiperSlide>
-            <img className={s.swiper_img} src="./Image/apple.png" alt="" />
+            <img className={s.swiper_img} src="./Image/apple.png" alt="apple" />
           </SwiperSlide>
           <SwiperSlide>
-            <img className={s.swiper_img} src="./Image/apple.png" alt="" />
+            <img className={s.swiper_img} src="./Image/apple.png" alt="apple" />
           </SwiperSlide>
           <SwiperSlide>
-            <img className={s.swiper_img} src="./Image/apple.png" alt="" />
+            <img className={s.swiper_img} src="./Image/apple.png" alt="apple" />
           </SwiperSlide>
           <SwiperSlide>
-            <img className={s.swiper_img} src="./Image/apple.png" alt="" />
+            <img className={s.swiper_img} src="./Image/apple.png" alt="apple" />
           </SwiperSlide>
           <SwiperSlide>
-            <img className={s.swiper_img} src="./Image/apple.png" alt="" />
+            <img className={s.swiper_img} src="./Image/apple.png" alt="apple" />
           </SwiperSlide>
           <SwiperSlide>
-            <img className={s.swiper_img} src="./Image/apple.png" alt="" />
+            <img className={s.swiper_img} src="./Image/apple.png" alt="apple" />
           </SwiperSlide>
           <SwiperSlide>
-            <img className={s.swiper_img} src="./Image/apple.png" alt="" />
+            <img className={s.swiper_img} src="./Image/apple.png" alt="apple" />
           </SwiperSlide>
         </Swiper>
       </div>

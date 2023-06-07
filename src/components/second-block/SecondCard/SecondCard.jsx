@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./SecondCard.module.css";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 const SecondCard = ({ img, title, oldprice, price }) => {
   return (
@@ -36,7 +37,9 @@ const SecondCard = ({ img, title, oldprice, price }) => {
                 <h2>{price} ₽</h2>
               </div>
               <div>
-                <button>Купить</button>
+                <Link href="/aksesuar">
+                  <button>Купить</button>
+                </Link>
               </div>
             </div>
           </div>

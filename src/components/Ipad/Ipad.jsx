@@ -21,17 +21,14 @@ const Ipad = () => {
               id=""
             >
               <option className={s.option} value="Apple">
-                {" "}
                 <input type="checkbox" />
                 Apple
               </option>
               <option className={s.option} value="Samsung">
-                {" "}
                 <input type="checkbox" />
                 Samsung
               </option>
               <option className={s.option} value="Xiaomi">
-                {" "}
                 <input type="checkbox" /> Xiaomi
               </option>
             </select>

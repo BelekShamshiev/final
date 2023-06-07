@@ -5,6 +5,4 @@ export const applewatch =[
     {id:4, img:"/agag.jpg",title:"Apple Watch Series 3 GPS Silver - 38mm - White Sport Band",oldprice:"72 190",price:"66990",href:""},
     {id:5, img:"/sam.jpg",title:"Samsung Galaxy Watch Active 2 with Bluetooth, 40mm, Pink Gold",oldprice:"25 000",price:"20219",href:""},
     {id:6, img:"/xiom.jpg",title:"Strap-it Xiaomi Mi Band 5 siliconen bandje (lichtgroen)",oldprice:"2 190",price:"1090",href:""},
-
-
 ]

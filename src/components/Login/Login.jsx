@@ -80,7 +80,7 @@ const Login = () => {
             <div className={s.login_btn}>
               <button type="submit">Log In</button>
             </div>
-            <Link className={s.login_btn_admin} href="/admin">
+            <Link className={s.login_btn_admin} href="/upload">
               Log In like Admin
             </Link>
           </div>

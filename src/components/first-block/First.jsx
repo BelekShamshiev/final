@@ -123,7 +123,7 @@ const First = () => {
             </div>
           </div>
           <div>
-            <h1 className={styles.cotalog}>Коталог</h1>
+            <h1 className={styles.cotalog}>Каталог</h1>
           <div className={styles.catalog__block}>
             <div className={styles.catalog__card_items}>
               <div className={styles.catalog__card}>

@@ -14,6 +14,10 @@ import Link from "next/link";
 
 const PurchaseFirst = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [selectedColor, setSelectedColor] = useState(
+    "/Image/Purchaseimg/SmartPhone.png"
+  );
+
   const showModal = () => {
     setIsModalOpen(true);
   };
@@ -59,7 +63,6 @@ const PurchaseFirst = () => {
                     clickable: true,
                   }}
                   navigation={true}
-                  autoplay={{ delay: 2500 }}
                   speed={700}
                   modules={[Navigation, Autoplay]}
                   className={s.purchaseFirstSwiper}
@@ -67,20 +70,10 @@ const PurchaseFirst = () => {
                   <SwiperSlide>
                     <div className={s.purchaseFirst_slide}>
                       <Image
-                        src="/Image/Purchaseimg/SmartPhone.png"
+                        src={selectedColor}
                         alt="Smartfon"
-                        width={362}
-                        height={362}
-                      />
-                    </div>
-                  </SwiperSlide>
-                  <SwiperSlide>
-                    <div className={s.purchaseFirst_slide}>
-                      <Image
-                        src="/Image/Purchaseimg/SmartPhone.png"
-                        alt="Smartfon"
-                        width={362}
-                        height={362}
+                        width={322}
+                        height={422}
                       />
                     </div>
                   </SwiperSlide>
@@ -167,7 +160,7 @@ const PurchaseFirst = () => {
                     <div className={s.info_second_content}>
                       <h1>Цвет:</h1>
                       <div className={s.info_second_content_btn}>
-                        <button>
+                        <button onClick={() => setSelectedColor("/black.jpg")}>
                           <Image
                             src="/Image/Purchaseimg/checkmark.svg"
                             alt="Smartfon"
@@ -175,7 +168,7 @@ const PurchaseFirst = () => {
                             height={13.5}
                           />
                         </button>
-                        <button>
+                        <button onClick={() => setSelectedColor("/green.jpg")}>
                           <Image
                             src="/Image/Purchaseimg/checkmark.svg"
                             alt="Smartfon"
@@ -183,7 +176,7 @@ const PurchaseFirst = () => {
                             height={13.5}
                           />
                         </button>
-                        <button>
+                        <button onClick={() => setSelectedColor("/ww.jpg")}>
                           <Image
                             src="/Image/Purchaseimg/checkmark.svg"
                             alt="Smartfon"
@@ -192,69 +185,39 @@ const PurchaseFirst = () => {
                           />
                         </button>
                       </div>
-                      <p>black</p>
-                      <h1>Оперативная память:</h1>
-                      <button className={s.info_second_content_btn_2}>
-                        8 GB
-                      </button>
                     </div>
-                    <div className={s.info_second_title}>
-                      <a href="">Все характеристики &#8594;</a>
-                    </div>
+                    <div className={s.info_second}></div>
                   </div>
                   <div className={s.characteristic_info_second_2}>
-                    <div className={s.info_second_2}>
-                      <h1>Встроенная память:</h1>
-                      <div>
-                        <button>128 GB</button>
-                        <button>256 GB</button>
-                      </div>
+                    <div className={s.characteristic_info_second_2_content}>
+                      <h1>Диагональ экрана:</h1>
+                      <p>6.7"</p>
                     </div>
-                    <div className={s.info_second_2_down}>
-                      <h1>Экран:</h1>
-                      <button>6,1"</button>
+                    <div className={s.characteristic_info_second_2_content}>
+                      <h1>Тип экрана:</h1>
+                      <p>Super Retina XDR</p>
+                    </div>
+                    <div className={s.characteristic_info_second_2_content}>
+                      <h1>Операционная система:</h1>
+                      <p>iOS 15</p>
                     </div>
                   </div>
                 </div>
-              </div>
-              <div className={s.purchaseFirst__bottom_info}>
-                <Link href="/pay">
-                  <button>Купить</button>
-                </Link>
-                <div>
-                  <p>
-                    <Image
-                      src="/Image/Purchaseimg/logo1.svg"
-                      alt="Smartfon"
-                      width={14}
-                      height={14}
-                    />
-                    Доставка по Москве в пределах МКАД от 700₽
-                  </p>
-                  <p>
-                    <Image
-                      src="/Image/Purchaseimg/logo2.svg"
-                      alt="Smartfon"
-                      width={14}
-                      height={14}
-                    />
-                    Доставка по всей России через транспортную компанию СДЕК, по
-                    100% оплате
-                  </p>
-                  <p>
-                    <Image
-                      src="/Image/Purchaseimg/logo3.svg"
-                      alt="Smartfon"
-                      width={14}
-                      height={14}
-                    />
-                    Отправка происходит в течении часа после оплаты товара.
-                  </p>
+                <div className={s.characteristic_info_third}>
+                  <div className={s.purchaseFirst__bottom_info}>
+                    {" "}
+                    <Link href="/pay">
+                      {" "}
+                      <button>Купить</button>{" "}
+                    </Link>{" "}
+                    <div></div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
+        <div className={s.purchaseFirst__information}></div>
       </div>
     </div>
   );
